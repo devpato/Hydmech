@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      HYDMECH
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="home" no-bounce>
+    <ion-grid class="mainGridHomePage">
+        <ion-row>          
+          <ion-col text-center>
+              <img src="assets/img/hydemech.png" style="width: 250px"/>
+          </ion-col>
+        </ion-row>
+       
+          <ion-list class="passField">            
+                <ion-item>
+                    <ion-input type="password" placeholder="Password" #myPass  [value]="passValue" (input)="passValue=$event.target.value" ></ion-input>
+                </ion-item>            
+          </ion-list>      
+          <button ion-button color="dark" (click)="changePage(myPass.value)">Login</button>
+    </ion-grid>    
 </ion-content>
