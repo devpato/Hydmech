@@ -3,6 +3,7 @@ import { NavController, AlertController} from 'ionic-angular';
 import {MainPage} from '../main/main';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
