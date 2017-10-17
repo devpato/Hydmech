@@ -38,9 +38,31 @@ $colors: (
   secondary:  #020303,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
 );
 
+$BOTTOM_COLOR : #FFD41D;
+$TOP_COLOR: #F2ED82;
+
+.buttonPrimary {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* Standard syntax */
+    font-weight: bolder;
+    border: 2px outset black;
+    border-radius: 0px !important;
+    font-size: 30px !important;
+}
+
+span.button-inner{
+  padding-top: 0px !important;
+}
+
+.backImg {
+  background: url('../assets/img/bg.jpg') no-repeat center;
+}
 
 // App iOS Variables
 // --------------------------------------------------
