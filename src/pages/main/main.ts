@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { FacebookPage } from '../facebook/facebook';
 import { InAppBrowser,  InAppBrowserOptions } from '@ionic-native/in-app-browser';
+import {RoundsawPage} from '../roundsaw/roundsaw';
+import {MeasuretypePage} from '../measuretype/measuretype';
+import {MeasureTypeService} from '../../app/shared/measuretype.service';
+import {CalcTypeService} from '../../app/shared/calctype.service';
 /**
  * Generated class for the MainPage page.
  *
@@ -16,6 +20,7 @@ import { InAppBrowser,  InAppBrowserOptions } from '@ionic-native/in-app-browser
 })
 
 export class MainPage {
+  measureTypePage  = MeasuretypePage
   options : InAppBrowserOptions = {
     location : 'yes',//Or 'no' 
     hidden : 'no', //Or  'yes'
@@ -33,7 +38,8 @@ export class MainPage {
     presentationstyle : 'pagesheet',//iOS only 
     fullscreen : 'yes',//Windows only    
   };
-  constructor(public navCtrl: NavController, public navParams: NavParams,private theInAppBrowser: InAppBrowser) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private theInAppBrowser: InAppBrowser,
+    private measuretype: MeasureTypeService, private calctype: CalcTypeService) {
   }
 
   ionViewDidLoad() {
@@ -44,6 +50,11 @@ export class MainPage {
   public openFacebook(url : string){
     let target = "_self";
     this.theInAppBrowser.create(url,target,this.options);
+  }
+
+  public openMeasureType(calctype) {
+    this.calctype.setCalcType(calctype);
+    this.navCtrl.push(this.measureTypePage);
   }
   
 
