@@ -7,12 +7,76 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Calc</ion-title>
+    <ion-title>Calculations</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="backImg">
+  <ion-grid text-center>
+    <ion-row>          
+        <ion-col text-center>
+            <img src="assets/img/hydemech.png" style="width: 250px"/>
+        </ion-col>
+      </ion-row>
+    <ion-row>
+      <ion-col col-8>
+          <p class="inputLabels">Max Material Diameter</p>
+      </ion-col>
+      <ion-col col-4>
+          <ion-input class="inputValues" type="text" placeholder="Enter value" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
+      </ion-col>
+      <ion-col col-8>
+        <p class="inputLabels">Diameter</p>
+      </ion-col>
+      <ion-col col-4>
+          <ion-input class="inputValues" type="text" placeholder="Enter value" #diamter  [value]="diameterValue" (input)="diameterValue=$event.target.value" text-center></ion-input>
+      </ion-col>
+      <ion-col col-8>
+        <p class="inputLabels">Cut Length</p>
+      </ion-col>
+      <ion-col col-4>
+          <ion-input class="inputValues" type="text" placeholder="Enter value" #cutLength  [value]="cutLengthValue" (input)="cutLengthValue=$event.target.value" text-center></ion-input>
+      </ion-col>
+      <ion-col col-8>
+          <p class="inputLabels">Master Bar Length</p>
+      </ion-col>
+      <ion-col col-4>
+          <ion-input class="inputValues" type="text" placeholder="Enter value" #masterBar  [value]="masterBarValue" (input)="masterBarValue=$event.target.value" text-center></ion-input>
+      </ion-col>
 
+      <ion-col col-2>         
+      </ion-col>
+      <ion-col col-8>
+          <p class="inputLabels">Material Grade</p>          
+      </ion-col>
+      <ion-col col-2>         
+      </ion-col>
+
+      <ion-col col-1>         
+      </ion-col>
+      <ion-col col-10>
+        <ion-select [(ngModel)]="tool" class="selectOpt">
+              <ion-option selected="true">Tool Steel - A2, D2, H13</ion-option>
+              <ion-option>Black Olives</ion-option>
+              <ion-option>Extra Cheese</ion-option>
+              <ion-option>Mushrooms</ion-option>
+              <ion-option>Pepperoni</ion-option>
+              <ion-option>Sausage</ion-option>
+          </ion-select>
+      </ion-col>
+      <ion-col col-1>         
+      </ion-col>
+
+        <ion-col col-3>         
+        </ion-col>
+        <ion-col col-6>
+            <button ion-button  id="calculate" class="buttonSecondary" (click)="openCalcPage('standard')" >CALCULATE</button>
+        </ion-col>
+        <ion-col col-3>         
+        </ion-col>
+
+    </ion-row>
+  </ion-grid>
 </ion-content>

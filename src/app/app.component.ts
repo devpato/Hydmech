@@ -8,7 +8,7 @@ import {MeasuretypePage} from '../pages/measuretype/measuretype';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage; // don't forget to change it to HomePage so home because the first page in the app
+  rootPage:any = MeasuretypePage; // don't forget to change it to HomePage so home because the first page in the app
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
