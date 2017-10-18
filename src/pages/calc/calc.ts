@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {MeasureTypeService} from '../../app/shared/measuretype.service';
 import {CalcTypeService} from '../../app/shared/calctype.service';
+import {ResultsPage} from '../results/results';
 /**
  * Generated class for the CalcPage page.
  *
@@ -15,7 +16,7 @@ import {CalcTypeService} from '../../app/shared/calctype.service';
   templateUrl: 'calc.html',
 })
 export class CalcPage {
-
+  resultsPage = ResultsPage;
   constructor(public navCtrl: NavController, public navParams: NavParams,private measuretype: MeasureTypeService, private calctype: CalcTypeService) {
   }
 
@@ -28,4 +29,7 @@ export class CalcPage {
     console.log(this.calctype.getCalcType());
   }
 
+  openResultsPage() {
+    this.navCtrl.push(this.resultsPage);
+  }
 }

@@ -85,6 +85,11 @@ $TOP_COLOR_DARK: #524F4B;
   max-width: 100% !important;
 }
 
+.objectsCalcPage {
+ padding-top: 0px !important; 
+ padding-bottom:0px !important;
+}
+
 #calculate {
   margin-top: 15%;
 }
@@ -111,6 +116,21 @@ span.button-inner {
   font-size: 15px;
 }
 
+.inputValuesResults {
+  background: $TOP_COLOR; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); 
+  font-weight: bolder;
+  border: 1px outset black;
+  border-radius: 0px !important;
+  height:40px;
+  padding-top: 10px;
+  font-size: 15px;
+  color: $BOTTOM_COLOR;
+}
+
 .inputValues {
   background: $TOP_COLOR; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Safari 5.1 to 6.0 */
@@ -123,9 +143,9 @@ span.button-inner {
   height:40px;
   margin-top: 14px;
   color: $BOTTOM_COLOR;
-  padding-bottom: 15px !important;
+  padding-bottom: 20px !important;
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 // App iOS Variables

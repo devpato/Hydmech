@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
 import { MainPage } from '../pages/main/main';
+import {ResultsPage} from '../pages/results/results';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import {RoundsawPage} from '../pages/roundsaw/roundsaw';
@@ -22,7 +23,8 @@ import {CalcTypeService} from './shared/calctype.service';
     RoundsawPage,
     MeasuretypePage,
     FacebookPage,
-    CalcPage
+    CalcPage,
+    ResultsPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import {CalcTypeService} from './shared/calctype.service';
     RoundsawPage,
     MeasuretypePage,
     FacebookPage,
-    CalcPage
+    CalcPage,
+    ResultsPage
   ],
   providers: [
     StatusBar,

@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'results.html',
 })
 export class ResultsPage {
-
+  rpm = 12;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
