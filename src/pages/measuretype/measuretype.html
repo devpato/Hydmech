@@ -5,25 +5,20 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-<ion-navbar>
-    <ion-title>
-      Measurement Type
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="onOpenMenu()">
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
+    <ion-navbar color="dark">
+        <ion-title text-center>
+        <img src="assets/img/hydemech.png" style="width: 190px"/>
+        </ion-title>
+        <ion-buttons end>
+        <button ion-button (click)="onOpenMenu()">
+            <ion-icon name="menu" style="color: white !important;"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
-<ion-content class="backImg" padding>
+<ion-content class="typesBg" padding>
     <ion-grid class="mainGridMeasureTypePage">
-      <ion-row>          
-        <ion-col text-center>
-            <img src="assets/img/hydemech.png" style="width: 250px"/>
-        </ion-col>
-      </ion-row>
       <ion-col text-center>
         <label class="labelTitles">SELECT ONE</label> 
       </ion-col>      
