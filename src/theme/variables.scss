@@ -37,8 +37,9 @@ $colors: (
   primary:    #FFD41D,
   secondary:  #020303,
   danger:     #f53d3d,
+  medium:     #d8d2d2,
   light:      #f4f4f4,
-  dark:       #222,
+  dark:       black,
 );
 
 $BOTTOM_COLOR : #FFD41D;
@@ -47,15 +48,9 @@ $BOTTOM_COLOR_DARK : black;
 $TOP_COLOR_DARK: #524F4B;
 
 .buttonPrimary {
-    background: $TOP_COLOR; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Firefox 3.6 to 15 */
-    background: linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* Standard syntax */
-    font-weight: bolder;
-    border: 2px outset black;
+    background: $BOTTOM_COLOR; /* For browsers that do not support gradients */
     border-radius: 0px !important;
-    font-size: 30px !important;
+    font-size: 14px !important;
 }
 
 .buttonSecondary {
@@ -99,7 +94,7 @@ span.button-inner {
 }
 
 .backImg {
-  background: url('../assets/img/bg.jpg') no-repeat center;
+  background-color: black/*url('../assets/img/bg.png') no-repeat center;*/
 }
 
 .inputLabels {
@@ -132,20 +127,41 @@ span.button-inner {
 }
 
 .inputValues {
-  background: $TOP_COLOR; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); 
-  font-weight: bolder;
-  border: 1px outset black;
-  border-radius: 0px !important;
+  background-color: rgba(0,0,0,.5);
+  color: white !important;
   height:40px;
   margin-top: 14px;
-  color: $BOTTOM_COLOR;
   padding-bottom: 20px !important;
   text-align: center;
   font-size: 18px;
+}
+
+.customMenuToolbar {
+  min-height: 100px !important;
+  text-align: left !important;
+}
+
+.scroll-content {
+    overflow-y: auto !important;
+}
+
+.item.item-input {
+  background-color: rgba(0,0,0,.5);
+  color: white !important;
+
+}
+
+.text-input::-moz-placeholder {
+  color: white;
+}
+
+.text-input:-ms-input-placeholder {
+  color: white;
+}
+
+.text-input::-webkit-input-placeholder {
+  text-indent: 0;
+  color: white;
 }
 
 // App iOS Variables

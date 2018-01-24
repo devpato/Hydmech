@@ -5,13 +5,17 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Measurement Type</ion-title>
+<ion-navbar>
+    <ion-title>
+      Measurement Type
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onOpenMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content class="backImg" padding>
     <ion-grid class="mainGridMeasureTypePage">

@@ -1,9 +1,9 @@
-import { Component,Output,EventEmitter,Injectable } from '@angular/core';
+import { Component,Output,EventEmitter,Injectable, Input } from '@angular/core';
 import { NavController, AlertController} from 'ionic-angular';
 import {MainPage} from '../main/main';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
-
+import {UserService} from '../../app/shared/user.service';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -12,6 +12,8 @@ import { Http } from '@angular/http';
 @Injectable()
 export class HomePage {
   @Output() cleanInput :  EventEmitter<string>;
+  @Output() setUsername: EventEmitter<any> = new EventEmitter<any>();
+  @Input() theusername: string;
   mainPage = MainPage;
   homePage = HomePage;
   passValue : string = "";
@@ -20,22 +22,28 @@ export class HomePage {
   tempUser : string = "";
   tempUsers : JSON;
   tempFlag: boolean = false;
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController,private http: Http) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController,
+  private http: Http,
+  private usernameService: UserService) {
     this.cleanInput = new EventEmitter();
   }
+
 
  //https://api.myjson.com/bins/ https://jsonblob.com/850ee672-9d9a-11e7-aa97-09434374a2b8 https://quarkbackend.com/getfile/wearetamo/hydmech //https://www.jasonbase.com
  //http://myjson.com
   changePage( myPass: string, username:string){
     for(const i of Object.keys(this.tempUsers)){
       if(myPass == this.tempUsers[i].password && username == this.tempUsers[i].username){
-        this.tempFlag = true;
+         this.tempFlag = true;
+         this.setUsername.emit(username);
+         this.theusername = username;
+         console.log("the user name is: " + this.theusername);
       }
     }
     if(this.tempFlag) {
       this.navCtrl.push(this.mainPage);
-      this.passValue = '';
-      this.userValue = '';
+      /*this.passValue = '';
+      this.userValue = '';*/
       this.tempFlag = false;
     } else {
       const alert = this.alertCtrl.create({

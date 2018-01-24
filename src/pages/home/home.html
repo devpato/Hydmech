@@ -1,11 +1,3 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      HYDMECH
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding class="home" no-bounce>
     <ion-grid class="mainGridHomePage">
         <ion-row>          
@@ -15,14 +7,14 @@
         </ion-row>
        
           <ion-list class="passField">            
-                <ion-item>
-                    <ion-input type="text" placeholder="Username" #myUser  [value]="userValue" (input)="userValue=$event.target.value" ></ion-input>
+                <ion-item class="inputFields">
+                    <ion-input type="text" class="inputFields" placeholder="Username" #myUser  [value]="userValue" (input)="userValue=$event.target.value" ></ion-input>
                 </ion-item>
                 <br>
-                <ion-item>
-                    <ion-input type="password" placeholder="Password" #myPass  [value]="passValue" (input)="passValue=$event.target.value" ></ion-input>
-                </ion-item>             
+                <ion-item class="inputFields">
+                    <ion-input type="password" class="inputFields" placeholder="Password" #myPass  [value]="passValue" (input)="passValue=$event.target.value" ></ion-input>
+                </ion-item>              
           </ion-list>      
-          <button ion-button color="dark" (click)="changePage(myPass.value, myUser.value)">Login</button>
+          <button ion-button color="primary" class="buttonPrimary" (click)="changePage(myPass.value, myUser.value)">Sing In</button>
     </ion-grid>    
 </ion-content>

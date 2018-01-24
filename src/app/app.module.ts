@@ -15,6 +15,7 @@ import {RoundsawPage} from '../pages/roundsaw/roundsaw';
 import {MeasuretypePage} from '../pages/measuretype/measuretype';
 import {MeasureTypeService} from './shared/measuretype.service';
 import {CalcTypeService} from './shared/calctype.service';
+import {UserService} from './shared/user.service';
 @NgModule({
   declarations: [
     MyApp,
@@ -47,7 +48,7 @@ import {CalcTypeService} from './shared/calctype.service';
     SplashScreen,
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MeasureTypeService,CalcTypeService
+    MeasureTypeService,CalcTypeService, UserService
   ]
 })
 export class AppModule {}

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController} from 'ionic-angular';
 import { FacebookPage } from '../facebook/facebook';
 import { InAppBrowser,  InAppBrowserOptions } from '@ionic-native/in-app-browser';
 import {RoundsawPage} from '../roundsaw/roundsaw';
 import {MeasuretypePage} from '../measuretype/measuretype';
 import {MeasureTypeService} from '../../app/shared/measuretype.service';
 import {CalcTypeService} from '../../app/shared/calctype.service';
+import {UserService} from '../../app/shared/user.service';
 /**
  * Generated class for the MainPage page.
  *
@@ -38,8 +39,15 @@ export class MainPage {
     presentationstyle : 'pagesheet',//iOS only 
     fullscreen : 'yes',//Windows only    
   };
-  constructor(public navCtrl: NavController, public navParams: NavParams,private theInAppBrowser: InAppBrowser,
-    private measuretype: MeasureTypeService, private calctype: CalcTypeService) {
+  constructor(public navCtrl: NavController, 
+  public navParams: NavParams,
+  private theInAppBrowser: InAppBrowser,
+  private measuretype: MeasureTypeService, 
+  private calctype: CalcTypeService,
+  private menuCtrl: MenuController,
+  private userService: UserService
+ ) {
+    
   }
 
   ionViewDidLoad() {
@@ -55,6 +63,10 @@ export class MainPage {
   public openMeasureType(calctype) {
     this.calctype.setCalcType(calctype);
     this.navCtrl.push(this.measureTypePage);
+  }
+
+  onOpenMenu(){
+    this.menuCtrl.open();    
   }
   
 

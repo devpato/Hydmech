@@ -1,1 +1,48 @@
-<ion-nav [root]="rootPage"></ion-nav>
+
+<ion-menu [content]="nav">
+    <ion-header>
+        <ion-toolbar color="primary" class="customMenuToolbar" text-left>
+            <ion-title text-left>
+                <p >WELCOME</p>
+                <p style="font-size: 14px" #username.theusername></p>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+     <ion-content>
+        <ion-list padding>
+            <button ion-item (click)="onLoad(mainPage)" no-lines detail-none>
+               <ion-icon name="home" item-left color="medium"></ion-icon>
+              Home 
+            </button>
+            <button ion-item (click)="onLoad(mainPage)" no-lines detail-none>
+               <ion-icon name="logo-youtube" item-left color="medium"></ion-icon>
+               HYDMECH Videos 
+            </button>
+            <button ion-item (click)="onLoad(settingsPage)" no-lines detail-none>
+               <ion-icon name="ios-image" item-left color="medium"></ion-icon>
+               Saw Gallery
+            </button>
+             <button ion-item (click)="onLoad(settingsPage)" no-lines detail-none>
+              
+               HYDMECH Website
+            </button>
+             <button ion-item (click)="onLoad(settingsPage)" detail-none>
+               
+               Dealer Website
+            </button>
+            <button ion-item (click)="onLoad(settingsPage)" detail-none>
+               
+               Sign Out
+            </button>
+            <ion-item >               
+                Let's Connect!
+            </ion-item>
+            <ion-item  no-lines detail-none>
+               <ion-icon name="logo-facebook" item-left color="medium"></ion-icon>
+               <ion-icon name="logo-twitter" item-left color="medium"></ion-icon>
+               <ion-icon name="logo-linkedin" item-left color="medium"></ion-icon>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #nav></ion-nav>
