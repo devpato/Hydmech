@@ -11,7 +11,7 @@ import {UserService} from './shared/user.service';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage; // don't forget to change it to HomePage so home because the first page in the app
+  rootPage:any = MeasuretypePage; // don't forget to change it to HomePage so home because the first page in the app
   mainPage = MainPage;
   settingsPage = ResultsPage;
   username : string;

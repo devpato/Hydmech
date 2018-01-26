@@ -17,12 +17,21 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content class="typesBg" padding>
-    <ion-grid class="mainGridMeasureTypePage">
-      <ion-col text-center>
-        <label class="labelTitles">MEASUREMENT SYSTEM</label> 
-      </ion-col>      
-      <button ion-button  id="standardButton" class="buttonPrimary" (click)="openCalcPage('standard')" >STANDARD</button>
-      <button ion-button  class="buttonPrimary" (click)="openCalcPage('metric')">METRIC</button>
-  </ion-grid>    
+<ion-content padding-bottom  class="backImg">
+    <ion-row style="margin-top: 8%;">          
+        <ion-col text-center>
+            <label class="labelTitles">MEASUREMENT TYPE</label> 
+        </ion-col>     
+      </ion-row>
+    <ion-row style="background-color: black; width: 100% important; heigth: 8px !important;padding-left: 12%; margin-top:10%; ">
+            <p style="color: white;"></p>
+    </ion-row>
+    <ion-grid text-left class="squareBackground" style="height: 70vh !important;">
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openCalcPage('imperial')">
+            <strong><p>IMPERIAL</p></strong>
+        </button>
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openCalcPage('metric')">
+           <strong><p>METRICAL</p></strong>
+        </button>
+    </ion-grid>
 </ion-content>
