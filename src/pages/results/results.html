@@ -5,70 +5,94 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Results</ion-title>
-  </ion-navbar>
-
+    <ion-navbar color="dark">
+        <ion-title text-center>
+        <img src="assets/img/hydemech.png" style="width: 190px"/>
+        </ion-title>
+        <ion-buttons end>
+        <button ion-button (click)="onOpenMenu()">
+            <ion-icon name="menu" style="color: white !important;"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 
-<ion-content padding-bottom padding-left padding-right class="backImg">
-    <ion-grid text-center>
-        <ion-row>          
-            <ion-col text-center class="objectsCalcPage">
-                <img src="assets/img/hydemech.png" style="width: 250px"/>
-            </ion-col>
-          </ion-row>
-        <ion-row>
-          <ion-col col-8 class="objectsCalcPage">
-              <p class="inputLabels">Machine</p>
-          </ion-col>
-          <ion-col col-4 class="objectsCalcPage">
-              <p class="inputValuesResults" type="text" placeholder=""  text-center>CSNC-175</p>
-          </ion-col>
-          <ion-col col-8 class="objectsCalcPage">
-            <p class="inputLabels">Cycle Time</p>
-          </ion-col>
-          <ion-col col-4 class="objectsCalcPage">
-              <p class="inputValuesResults" type="text" placeholder=""  text-center>15.58</p>
-          </ion-col>
-          <ion-col col-8 class="objectsCalcPage">
-            <p class="inputLabels">Rate Per Hour</p>
-          </ion-col>
-          <ion-col col-4 class="objectsCalcPage">
-              <p class="inputValuesResults" type="text" placeholder=""  text-center>90%</p>
-          </ion-col>
-          <ion-col col-8 class="objectsCalcPage">
-              <p class="inputLabels">Pieces Per Hour</p>
-          </ion-col>
-          <ion-col col-4 class="objectsCalcPage">
-              <p class="inputValuesResults" type="text" placeholder=""  text-center>208</p>
-          </ion-col> 
-          <ion-col col-8 class="objectsCalcPage">
-              <p class="inputLabels">RPM</p>
-          </ion-col>
-          <ion-col col-4 class="objectsCalcPage">
-              <p class="inputValuesResults" type="text" placeholder=""  text-center>{{rpm}}</p>
-          </ion-col>  
-          <ion-col col-8 class="objectsCalcPage">
-              <p class="inputLabels">Blade Speed</p>
-          </ion-col>
-          <ion-col col-4 class="objectsCalcPage">
-              <p class="inputValuesResults" type="text" placeholder="" text-center>80</p>
-          </ion-col>  
-          <ion-col col-8 class="objectsCalcPage">
-              <p class="inputLabels">Tooth Load</p>
-          </ion-col>
-          <ion-col col-4 class="objectsCalcPage">
-              <p class="inputValuesResults" type="text" placeholder=""  text-center>0.050</p>
-          </ion-col>  
-          <ion-col col-8 class="objectsCalcPage">
-              <p class="inputLabels">Cut Time</p>
-          </ion-col>
-          <ion-col col-4 class="objectsCalcPage">
-              <p class="inputValuesResults" type="text" placeholder=""  text-center>11.37</p>
-          </ion-col>    
+<ion-content padding-bottom  class="backImg">
+
+        <ion-row style="background-color: black; width: 100% important; heigth: 8px !important;padding-left: 12%; margin-top:10%; ">
+                <p style="color: white;">CSNC Series Calculator Result</p>
         </ion-row>
+
+
+    <ion-grid text-left class="squareBackground">
+        
+          <ion-row style="margin-left: 9%;">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Machine</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>CSNC-175</p>
+                </ion-col>
+          </ion-row> 
+           <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Cycle Time</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>15.58</p>
+                </ion-col>
+          </ion-row> 
+           <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Rate per Hour</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>90%</p>
+                </ion-col>
+          </ion-row>  
+           <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Pieces Per Hour</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>208</p>
+                </ion-col>
+          </ion-row>  
+           <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">RPM</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>89</p>
+                </ion-col>
+          </ion-row>  
+           <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Blade Speed</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>80</p>
+                </ion-col>
+          </ion-row>  
+           <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Tooth Load</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0.050</p>
+                </ion-col>
+          </ion-row>  
+           <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Cut Time</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>11.37</p>
+                </ion-col>
+          </ion-row>  
       </ion-grid>
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="changePage(myPass.value, myUser.value)">
+            <ion-icon class="mail" name="ios-mail" large></ion-icon>SEND RESULTS TO EMAIL
+        </button>
 </ion-content>

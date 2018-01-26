@@ -83,6 +83,14 @@ $TOP_COLOR_DARK: #524F4B;
 .objectsCalcPage {
  padding-top: 0px !important; 
  padding-bottom:0px !important;
+ margin-top: 0px;
+ margin-right: -10px !important;
+}
+
+.objectsCalcPage2 {
+ padding-top: 0px !important; 
+ padding-bottom:0px !important;
+ margin-top: 3px !important;
 }
 
 #calculate {
@@ -98,32 +106,26 @@ span.button-inner {
 }
 
 .inputLabels {
-  background: $TOP_COLOR; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($TOP_COLOR, $BOTTOM_COLOR); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($TOP_COLOR, $BOTTOM_COLOR); 
+  background: white !important;
   font-weight: bolder;
-  border: 1px outset black;
   border-radius: 0px !important;
   height:40px;
   padding-top: 10px;
   font-size: 15px;
+  color: black !important;
+  padding-left: 20px !important;
 }
 
 .inputValuesResults {
-  background: $TOP_COLOR; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); 
+  background: black; /* For browsers that do not support gradients */
   font-weight: bolder;
-  border: 1px outset black;
   border-radius: 0px !important;
   height:40px;
   padding-top: 10px;
-  font-size: 15px;
+  font-size: 12px;
   color: $BOTTOM_COLOR;
+  color: white !important;
+
 }
 
 .inputValues {
@@ -164,6 +166,21 @@ span.button-inner {
   color: white;
 }
 
+.squareBackground {
+  background: #222;
+  margin-top: -5px;
+  
+}
+
+.rowsForFields {
+  margin-left: 9%; 
+  margin-top: -20px !important;
+}
+
+.mail {
+    font-size: 20px !important;
+    margin-right: 2% !important;
+}
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
