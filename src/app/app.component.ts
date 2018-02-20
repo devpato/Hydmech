@@ -6,12 +6,13 @@ import { MainPage } from '../pages/main/main';
 import {MeasuretypePage} from '../pages/measuretype/measuretype';
 import {ResultsPage} from '../pages/results/results';
 import { HomePage } from '../pages/home/home';
+import { CalcPage } from '../pages/calc/calc';
 import {UserService} from './shared/user.service';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage; // don't forget to change it to HomePage so home because the first page in the app
+  rootPage:any = CalcPage; // don't forget to change it to HomePage so home because the first page in the app
   mainPage = MainPage;
   settingsPage = ResultsPage;
   username : string;

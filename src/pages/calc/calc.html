@@ -54,22 +54,22 @@
       <ion-col col-1>         
       </ion-col>
       <ion-col col-10>
-        <ion-select [(ngModel)]="tool" class="selectOpt"style="width: 285px;">
-              <ion-option selected="true">Tool Steel - A2, D2, H13</ion-option>
-              <ion-option>Black Olives</ion-option>
-              <ion-option>Extra Cheese</ion-option>
-              <ion-option>Mushrooms</ion-option>
-              <ion-option>Pepperoni</ion-option>
-              <ion-option>Sausage</ion-option>
-          </ion-select>
+        <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt"style="width: 285px;">
+            <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
+            <ion-option value="1">Carbon/Forging Grades - 1145, 1215, 1008, 1018, 4140, 4340, 8620</ion-option>
+            <ion-option value="2">300 Series Stainless - 304, 316, 321</ion-option>
+            <ion-option value="3">400 Series Stainless - 410, 420, 440</ion-option>
+            <ion-option value="4">Tool Steel - A2, D2, H13</ion-option>
+            <ion-option value="5">Nonferrous - Aluminum, Brass, Copper</ion-option>
+            <ion-option value="6">Carbon Tube</ion-option>
+        </ion-select>
       </ion-col>
       <ion-col col-1>         
       </ion-col>
-
         <ion-col col-1>         
         </ion-col>
         <ion-col col-10>
-            <button ion-button  id="calculate" class="buttonPrimary" (click)="openResultsPage()" style="width: 280px;" >CALCULATE</button>
+            <button ion-button  id="calculate" class="buttonPrimary" (click)="openResultsPage()" style="width: 280px;">CALCULATE</button>
         </ion-col>
         <ion-col col-1>         
         </ion-col>

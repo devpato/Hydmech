@@ -17,6 +17,12 @@ import {ResultsPage} from '../results/results';
 })
 export class CalcPage {
   resultsPage = ResultsPage;
+  maxMaterialValue: number;
+  diameterValue: number;
+  cutLengthValue: number;
+  masterBarValue: number;
+  toolsValue: number; 
+
   constructor(public navCtrl: NavController, public navParams: NavParams,private measuretype: MeasureTypeService, private calctype: CalcTypeService) {
   }
 
@@ -30,6 +36,11 @@ export class CalcPage {
   }
 
   openResultsPage() {
+    console.log(this.maxMaterialValue);
+    console.log(this.diameterValue);
+    console.log(this.cutLengthValue);
+    console.log(this.masterBarValue);
+    console.log("Selected :" + this.toolsValue);
     this.navCtrl.push(this.resultsPage);
   }
 }
