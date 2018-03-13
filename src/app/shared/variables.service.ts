@@ -53,8 +53,8 @@ export class VariablesService {
         return this.toothNumber;
     }
     //Pitch
-    setPitch(bladeDiameter:number) {
-        this.pitch = (bladeDiameter*3.14)/this.toothNumber;
+    setPitch(toothNumber:number) {
+        this.pitch = (this.getDiameter()*3.14)/toothNumber;
     }
 
     getPitch() {
@@ -80,8 +80,8 @@ export class VariablesService {
     }
 
     //ChipDensity
-    setChipDensity() {
-        this.chipDensity = this.toothLoad* this.materialDiameter;
+    setChipDensity(toothLoad) {
+        this.chipDensity = toothLoad* this.getMaterialDiameter();
     }
 
     getChipDensity() {
@@ -235,7 +235,135 @@ export class VariablesService {
     }
 
 
+     carbonTable = [
+        {
+           id: "c1",
+           toothNumber : 60,
+           toothLoad: 0.0606,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+         {
+           id: "c2",
+           toothNumber : 60,
+           toothLoad: 0.0706,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+        {
+           id: "c3",
+           toothNumber : 60,
+           toothLoad: 0.0806,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+        {
+           id: "c4",
+           toothNumber : 60,
+           toothLoad: 0.0906,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+        {
+           id: "c5",
+           toothNumber : 80,
+           toothLoad: 0.0708,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+        {
+           id: "c6",
+           toothNumber : 80,
+           toothLoad: 0.0808,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+        {
+           id: "c7",
+           toothNumber : 80,
+           toothLoad: 0.0908,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+        {
+           id: "c8",
+           toothNumber : 100,
+           toothLoad: 0.0701,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+        {
+           id: "c9",
+           toothNumber : 100,
+           toothLoad: 0.0801,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        },
+        {
+           id: "c10",
+           toothNumber : 100,
+           toothLoad: 0.0901,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        }
+    ]
 
+    populateTable() {
+        for(var i = 0; i<this.carbonTable.length;i++) {
+            var tempToothNumber = this.carbonTable[i].toothNumber;
+            var tempToothLoad = this.carbonTable[i].toothLoad;
+            this.setPitch(tempToothNumber);
+            this.setGulletCapacity();
+            this.setChipDensity(tempToothLoad);
+            this.setFillRatio()
+            this.carbonTable[i].pitch = this.getPitch();
+            this.carbonTable[i].gullet = this.getGulletCapacity();
+            this.carbonTable[i].chipDensity = this.getChipDensity();
+            this.carbonTable[i].fillRatio = this.getFillRatio();
+        }
+    }
+
+    getCarbonRow() {
+       var reverseCarbonTable = this.carbonTable;
+       return reverseCarbonTable.slice().reverse().find(item => item.fillRatio < .101);
+    }
+
+    //Variables from input Fields
+    setDiameter(diameter) {
+        this.diameter = diameter;
+    }
+
+    getDiameter() {
+        return this.diameter;
+    }
+
+    setMaterialDiameter(materialDiameter) {
+        this.materialDiameter = materialDiameter;
+    }
+
+    getMaterialDiameter() {
+        return this.materialDiameter;
+    }
 
 
 

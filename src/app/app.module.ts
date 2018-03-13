@@ -16,7 +16,9 @@ import {MeasuretypePage} from '../pages/measuretype/measuretype';
 import {MeasureTypeService} from './shared/measuretype.service';
 import {CalcTypeService} from './shared/calctype.service';
 import {UserService} from './shared/user.service'; 
-import {TableService} from './shared/table.service'; 
+import {TableService} from './shared/table.service';
+import {VariablesService} from './shared/variables.service'; 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -49,7 +51,7 @@ import {TableService} from './shared/table.service';
     SplashScreen,
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MeasureTypeService,CalcTypeService, UserService,TableService
+    MeasureTypeService,CalcTypeService, UserService,TableService,VariablesService
   ]
 })
 export class AppModule {}
