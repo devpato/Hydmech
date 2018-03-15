@@ -328,8 +328,11 @@ export class VariablesService {
         }
     ]
 
+   
+
     populateTable() {
-        for(var i = 0; i<this.carbonTable.length;i++) {
+        var i = 0;
+        while ( i < this.carbonTable.length ) {
             var tempToothNumber = this.carbonTable[i].toothNumber;
             var tempToothLoad = this.carbonTable[i].toothLoad;
             this.setPitch(tempToothNumber);
@@ -340,9 +343,44 @@ export class VariablesService {
             this.carbonTable[i].gullet = this.getGulletCapacity();
             this.carbonTable[i].chipDensity = this.getChipDensity();
             this.carbonTable[i].fillRatio = this.getFillRatio();
+            i++;
         }
     }
 
+    populateGeneralObject(selectedOption) {
+        selectedOption = Number(selectedOption);
+        var tempCalc = {            
+           id: "generic",
+           toothNumber : 0,
+           toothLoad: 0.0,
+           pitch: 0,
+           gullet:0,
+           chipDensity: 0,
+           fillRatio: 0
+        }
+        
+        var tempToothLoad;
+
+        if(selectedOption == 2) {
+            tempToothLoad = .07000;
+        } else if(selectedOption == 3 || selectedOption == 4 || selectedOption == 6) {
+            tempToothLoad = .05;
+        } else if(selectedOption === 5) {
+            tempToothLoad = .06
+        } 
+        
+        this.setPitch(60);
+        this.setGulletCapacity();
+        this.setChipDensity(tempToothLoad);
+        this.setFillRatio();
+        tempCalc.pitch = this.getPitch();
+        tempCalc.gullet = this.getGulletCapacity();
+        tempCalc.chipDensity = this.getChipDensity();
+        tempCalc.fillRatio = this.getFillRatio();
+        tempCalc.toothLoad = tempToothLoad;
+        tempCalc.toothNumber = 60
+        return tempCalc;
+    }
     getCarbonRow() {
        var reverseCarbonTable = this.carbonTable;
        return reverseCarbonTable.slice().reverse().find(item => item.fillRatio < .101);

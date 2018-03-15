@@ -40,9 +40,14 @@ export class CalcPage {
     console.log("Selected :" + this.toolsValue);
     this.variables.setDiameter(this.diameterValue);
     this.variables.setMaterialDiameter(this.maxMaterialValue);
-    this.variables.populateTable();
-    console.log(this.variables.carbonTable);
-    console.log(this.variables.getCarbonRow())
+    if( this.toolsValue == 1) {
+          this.variables.populateTable();
+          console.log(this.variables.carbonTable);
+          console.log(this.variables.getCarbonRow());
+    } else {
+          this.variables.populateGeneralObject(this.toolsValue);
+          console.log( this.variables.populateGeneralObject(this.toolsValue)); 
+    }
     this.navCtrl.push(this.resultsPage);
   }
 }
