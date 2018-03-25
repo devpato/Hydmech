@@ -32,7 +32,7 @@
                     <p class="inputLabels">Machine</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>CSNC-175</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{machine}}</p>
                 </ion-col>
           </ion-row> 
            <ion-row class="rowsForFields">
@@ -40,7 +40,7 @@
                     <p class="inputLabels">Cycle Time</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>15.58</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{cycleTime}}</p>
                 </ion-col>
           </ion-row> 
            <ion-row class="rowsForFields">
@@ -48,7 +48,7 @@
                     <p class="inputLabels">Rate per Hour</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>90%</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{rph}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -56,7 +56,7 @@
                     <p class="inputLabels">Pieces Per Hour</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>208</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{pph}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -64,7 +64,7 @@
                     <p class="inputLabels">RPM</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>89</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{rpm}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -72,7 +72,7 @@
                     <p class="inputLabels">Blade Speed</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>80</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{bladeSpeed}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -80,7 +80,7 @@
                     <p class="inputLabels">Tooth Load</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0.050</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{toothLoad}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -88,11 +88,11 @@
                     <p class="inputLabels">Cut Time</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>11.37</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{cutTime}}</p>
                 </ion-col>
           </ion-row>  
       </ion-grid>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="changePage(myPass.value, myUser.value)">
+        <!--<button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="changePage(myPass.value, myUser.value)">
             <ion-icon class="mail" name="ios-mail" large></ion-icon>SEND RESULTS TO EMAIL
-        </button>
+        </button>-->
 </ion-content>

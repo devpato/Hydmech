@@ -19,13 +19,13 @@ export class VariablesService {
     timeToLoadBar: number;
     toothLoad: number;
     netCycleTime: number;
-    partOver1000mm: number;
+    partOver1000mm: boolean;
     cutTimePerBar:number;
     totalTime: number;
     cycleTime: number;
     uptimeEfficiency: number;
     pcsHour: number;
-    machine: number;
+    machine: any;
 
     //Variables from input Fields
     materialDiameter: number;
@@ -33,6 +33,8 @@ export class VariablesService {
     cutLength: number;
     masterBarLength:number;
     materialGrade: string;
+    uptime:number;
+    toolsValue: number;
 
     //Standard to metric
     mm: number;
@@ -53,12 +55,12 @@ export class VariablesService {
         return this.toothNumber;
     }
     //Pitch
-    setPitch(toothNumber:number) {
-        this.pitch = (this.getDiameter()*3.14)/toothNumber;
+    setPitch(toothNumber,maxMaterialValue) {
+        this.pitch = (this.getBlade(maxMaterialValue)*3.14)/toothNumber;
     }
 
     getPitch() {
-        return this.pitch;
+        return Number(this.pitch.toFixed(8));
     }
 
     //Gullet Capacity
@@ -67,7 +69,7 @@ export class VariablesService {
     }
 
     getGulletCapacity() {
-        return this.gulletCapacity;
+        return Number(this.gulletCapacity.toFixed(8));
     }
 
     //ChipLoad
@@ -89,17 +91,24 @@ export class VariablesService {
     }
 
     //CutTime
-    setCutTime() {
-        this.cutTime = (this.materialDiameter*60)/(this.toothNumber*this.chipLoad)*(this.mm/this.toothNumber)*(this.rpm);
+    setCutTime(toothNumber, toothLoad) {
+        console.log("cut time");
+        console.log(this.getDiameter());
+        console.log(toothNumber);
+        console.log(toothLoad);
+        console.log(Math.ceil(this.getRPM()));
+        console.log("Mat dia");
+        console.log(this.getMaterialDiameter());
+        this.cutTime = Number((Number((this.getDiameter())*60)/(toothNumber*toothLoad*Math.ceil(this.getRPM()))).toFixed(2));
     }
 
     getCutTime() {
-        return this.cutTime;
+        return Number(this.cutTime.toFixed(2));
     }
 
     //BladeSpeed
-    setBladeSpeed(){
-        //This reference Material Grade table
+    setBladeSpeed(bladeSpeed){
+        this.bladeSpeed = bladeSpeed;
     }
 
     getBladeSpeed() {
@@ -107,17 +116,17 @@ export class VariablesService {
     }
 
     //RPM
-    setRPM() {
-        this.rpm = this.bladeSpeed*1000/(this.diameter*3.14);
+    setRPM(maxMaterialValue) {
+        this.rpm = this.getBladeSpeed()*1000/(Number(this.getBlade(Number(this.getMaterialDiameter())))*3.14);
     }
 
     getRPM () {
-        return this.rpm;
+        return Math.ceil(this.rpm);
     }
 
     //BRT
     setBRT() {
-        this.brt = this.masterBarLength-(this.remnantLength+this.trim);
+        this.brt = this.masterBarLength-(80+this.getTrim()); //50.00
     }
 
     getBRT() {
@@ -125,8 +134,9 @@ export class VariablesService {
     }
 
     //PiecesPerBar
-    setPiecesPerBar() {
-        this.piecesPerbar = this.masterBarLength-(this.remnantLength+this.remnantLength)/(this.cutLength+this.bladeSpeed*(this.mm/25.4));
+    setPiecesPerBar(cutLength,bladeKerf) {
+        var addition = cutLength+bladeKerf;
+        this.piecesPerbar = Math.floor(this.getBRT()/(addition));
     }
 
     getPiecesPerBar() {
@@ -135,11 +145,11 @@ export class VariablesService {
 
     //Total Bars Needed
     setTotalBarsNeeded () {
-        this.totalBarsNeed = this.totalPieces/this.piecesPerbar;
+        this.totalBarsNeed = 1000000/ Math.floor(Number(this.getPiecesPerBar()));
     }
 
     getTotalBarsNeeded () {
-        return this.totalBarsNeed;
+        return Number(this.totalBarsNeed).toFixed(2);
     }
 
     //Fill Ratio
@@ -148,17 +158,7 @@ export class VariablesService {
     }
 
     getFillRatio() {
-        return this.fillRatio;
-    }
-
-    //Tooth Load
-
-    setToothLoad() {
-        
-    }
-
-    getToothLoad() {
-        return this.toothLoad;
+        return Number(this.fillRatio).toFixed(7);
     }
 
     //Time to Load Bar
@@ -170,18 +170,13 @@ export class VariablesService {
         return this.timeToLoadBar;
     }
 
-    //Net Cycle Time
-    setNetCycleTime() {
-        
-    }
-
-    getNetCycleTime() {
-        return this.netCycleTime;
-    }
-
     //Part Over 1000mm
-    setPartOver1000mm() {
-        
+    setPartOver1000mm(cutLength) {
+        if(cutLength > 1000) {
+            this.partOver1000mm = true;
+        } else {
+             this.partOver1000mm = false;
+        }
     }
 
     getPartOver1000mm() {
@@ -190,11 +185,11 @@ export class VariablesService {
 
     //Cut Time Per Bar
     setCutTimePerBar() {
-        this.cutTimePerBar = ((this.cutTime+this.netCycleTime+this.partOver1000mm)*this.piecesPerbar);
+        this.cutTimePerBar = (((Math.ceil(this.getCutTime())+4) + (this.partOver1000mm ? 120: 0))*this.getPiecesPerBar()+8)/60;
     }
 
     getCutTimePerBar() {
-        return this.cutTimePerBar;
+        return Number(this.cutTimePerBar).toFixed(2);
     }
 
     //Total Time
@@ -215,9 +210,17 @@ export class VariablesService {
         return this.uptimeEfficiency;
     }
 
+    setCycleTime() {
+        this.cycleTime = Number(this.getCutTimePerBar())*60/ this.getPiecesPerBar();
+    }
+
+    getCycleTime() {
+        return this.cycleTime.toFixed(2);
+    }
+
     //PCS Hour
-    setPCSHour() {
-        this.pcsHour = ((3600)/this.cycleTime)*this.uptimeEfficiency //CONVERT TO DECIMAL
+    setPCSHour(uptimeEfficiency) {
+        this.pcsHour = Math.ceil(((60*60)/Number(this.getCycleTime()))*uptimeEfficiency);
     }
 
     getPCSHour() {
@@ -225,13 +228,26 @@ export class VariablesService {
     }
 
     //Machine
-
-    setMachine() {
-        
+    setMachine(maxdiameter) {
+        var tempMachineTable = this.machineTable;
+        for(var i = 0; i<tempMachineTable.length ; i++) {
+           if(maxdiameter <= tempMachineTable[i].maxBarDiameter) {
+               this.machine = tempMachineTable[i].id;
+           }
+        }
     }
 
     getMachine() {
-        return this.machine;
+       return this.machine; 
+    }
+
+    getBlade(maxdiameter) {
+       var tempMachineTable = this.machineTable;
+        for(var i = 0; i<tempMachineTable.length ; i++) {
+           if(maxdiameter <= tempMachineTable[i].maxBarDiameter) {
+               return Number(tempMachineTable[i].bladeDiameter);
+           }
+        }
     }
 
 
@@ -328,21 +344,53 @@ export class VariablesService {
         }
     ]
 
+     machineTable = [
+        {
+           id: "CSNC-50",
+           bladeDiameter : 250,
+           maxBarDiameter: 50
+        },
+        {
+           id: "CSNC-80",
+           bladeDiameter : 285,
+           maxBarDiameter: 80
+        },
+        {
+           id: "CSNC-100",
+           bladeDiameter : 360,
+           maxBarDiameter: 101.6
+        },
+        {
+           id: "CSNC-125",
+           bladeDiameter : 420,
+           maxBarDiameter: 127
+        },
+        {
+           id: "CSNC-150",
+           bladeDiameter : 460,
+           maxBarDiameter: 152
+        },
+        {
+           id: "CSNC-175",
+           bladeDiameter : 560,
+           maxBarDiameter: 175
+        }
+     ]
    
 
-    populateTable() {
+    populateTable(maxMaterialValue) {
         var i = 0;
         while ( i < this.carbonTable.length ) {
             var tempToothNumber = this.carbonTable[i].toothNumber;
             var tempToothLoad = this.carbonTable[i].toothLoad;
-            this.setPitch(tempToothNumber);
+            this.setPitch(tempToothNumber,maxMaterialValue);
             this.setGulletCapacity();
             this.setChipDensity(tempToothLoad);
             this.setFillRatio()
             this.carbonTable[i].pitch = this.getPitch();
             this.carbonTable[i].gullet = this.getGulletCapacity();
             this.carbonTable[i].chipDensity = this.getChipDensity();
-            this.carbonTable[i].fillRatio = this.getFillRatio();
+            this.carbonTable[i].fillRatio = Number(this.getFillRatio());
             i++;
         }
     }
@@ -362,23 +410,23 @@ export class VariablesService {
         var tempToothLoad;
 
         if(selectedOption == 2) {
-            tempToothLoad = .07000;
+            tempToothLoad = .0901//.07000;
         } else if(selectedOption == 3 || selectedOption == 4 || selectedOption == 6) {
-            tempToothLoad = .05;
+            tempToothLoad = .0901//.05;
         } else if(selectedOption === 5) {
-            tempToothLoad = .06
+            tempToothLoad = .0901//.06
         } 
         
-        this.setPitch(60);
+        this.setPitch(60,this.getMaterialDiameter());
         this.setGulletCapacity();
         this.setChipDensity(tempToothLoad);
         this.setFillRatio();
         tempCalc.pitch = this.getPitch();
         tempCalc.gullet = this.getGulletCapacity();
         tempCalc.chipDensity = this.getChipDensity();
-        tempCalc.fillRatio = this.getFillRatio();
+        tempCalc.fillRatio = Number(this.getFillRatio());
         tempCalc.toothLoad = tempToothLoad;
-        tempCalc.toothNumber = 60
+        tempCalc.toothNumber = 100;
         return tempCalc;
     }
     getCarbonRow() {
@@ -403,10 +451,35 @@ export class VariablesService {
         return this.materialDiameter;
     }
 
+    setTrim(trim) {
+        this.trim = trim;
+    }
 
+    getTrim() {
+        return this.trim;
+    }
 
+    setMasterBarLength(masterBarLength) {
+        this.masterBarLength = masterBarLength;
+    }
 
+    getMasterBarLength() {
+        return this.masterBarLength;
+    }
 
+    setRatePerHour(rph) {
+        this.uptime = Number(rph)/100;
+    }
 
+    getRatePerHour() {
+        return this.uptime;
+    }
 
+    getToolsValue () {
+        return this.toolsValue;
+    }
+
+    setToolsValue(toolsValue) {
+        this.toolsValue = toolsValue;
+    }
 }

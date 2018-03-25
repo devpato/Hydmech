@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import {CalcTypeService} from '../../app/shared/calctype.service';
 import {MeasureTypeService} from '../../app/shared/measuretype.service';
 import { CalcPage } from '../calc/calc';
@@ -18,7 +18,7 @@ import { CalcPage } from '../calc/calc';
 export class MeasuretypePage {
   calcPage = CalcPage;
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private measuretype: MeasureTypeService, private calctype: CalcTypeService) {
+    private measuretype: MeasureTypeService, private calctype: CalcTypeService, private menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -28,6 +28,10 @@ export class MeasuretypePage {
       this.measuretype.setMeasureType(measuretype);
       this.navCtrl.push(this.calcPage);
    
+  }
+
+  onOpenMenu(){
+    this.menuCtrl.open();    
   }
 
 
