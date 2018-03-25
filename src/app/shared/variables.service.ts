@@ -483,3 +483,5 @@ export class VariablesService {
         this.toolsValue = toolsValue;
     }
 }
+
+//Variables done

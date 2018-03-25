@@ -1,6 +1,8 @@
 {
   "name": "hydmech",
-  "app_id": "",
+  "app_id": "4eaf411a",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
