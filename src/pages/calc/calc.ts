@@ -19,6 +19,7 @@ export class CalcPage {
   toolsValue: number; 
   rateValue: number;
   genericRow: any;
+  meType;
   
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private measuretype: MeasureTypeService, private calctype: CalcTypeService, private variables: VariablesService,
@@ -30,19 +31,20 @@ export class CalcPage {
   }
 
   ngOnInit() {
-    console.log(this.measuretype.getMeasureType());
+    this.meType = this.measuretype.getMeasureType();
+    console.log(this.meType);
     console.log(this.calctype.getCalcType());
   }
 
   openResultsPage() {
-    console.log(this.maxMaterialValue);
+    /*console.log(this.maxMaterialValue);
     console.log(this.diameterValue);
     console.log(this.cutLengthValue);
     console.log(this.masterBarValue);
     console.log(Number(this.rateValue)/100);
-    console.log("Selected :" + this.toolsValue);
-    this.variables.setDiameter(this.diameterValue);
-    this.variables.setMaterialDiameter(this.maxMaterialValue);
+    console.log("Selected :" + this.toolsValue);*/
+    this.variables.setDiameter(this.meType === 'imperial' ? Number(this.diameterValue/25.4) : Number(this.diameterValue));
+    this.variables.setMaterialDiameter(this.meType === 'imperial' ? Number(this.maxMaterialValue/25.4) : Number(this.maxMaterialValue) );
     if( this.toolsValue == 1) {
           this.variables.populateTable(this.maxMaterialValue);
           console.log(this.variables.carbonTable);
@@ -64,16 +66,16 @@ export class CalcPage {
       this.variables.setBladeSpeed(120);
     }
 
-    this.variables.setRPM(this.maxMaterialValue);
+    this.variables.setRPM(this.meType === 'imperial' ? Number(this.maxMaterialValue/25.4) : Number(this.maxMaterialValue));
     this.variables.setTrim(50); //could be in mm/in
     this.variables.setMasterBarLength(Number(this.masterBarValue));
     this.variables.setBRT();
-    this.variables.setPiecesPerBar(Number(this.cutLengthValue),2.80);
+    this.variables.setPiecesPerBar(this.meType === 'imperial' ? Number(this.cutLengthValue/25.4) : Number(this.cutLengthValue),2.80);
     this.variables.setTotalBarsNeeded();
-    this.variables.setPartOver1000mm(Number(this.cutLengthValue));
+    this.variables.setPartOver1000mm(this.meType === 'imperial' ? Number(this.cutLengthValue/25.4) : Number(this.cutLengthValue));
     this.variables.setRatePerHour(this.rateValue);
-    this.variables.setMachine(Number(this.maxMaterialValue));
-    this.variables.getBlade(Number(this.maxMaterialValue));
+    this.variables.setMachine(this.meType === 'imperial' ? Number(this.maxMaterialValue/25.4) : Number(this.maxMaterialValue));
+    this.variables.getBlade(this.meType === 'imperial' ? Number(this.maxMaterialValue/25.4) : Number(this.maxMaterialValue));
     this.variables.setToolsValue(this.toolsValue);
      if( this.toolsValue == 1) {
           this.variables.setCutTime(this.variables.getCarbonRow().toothNumber,this.variables.getCarbonRow().toothLoad);
