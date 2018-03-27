@@ -33,11 +33,15 @@ export class HomePage {
  //http://myjson.com
   changePage( myPass: string, username:string){
     for(const i of Object.keys(this.tempUsers)){
-      if(myPass == this.tempUsers[i].password && username == this.tempUsers[i].username){
+      /*if(myPass == this.tempUsers[i].password && username == this.tempUsers[i].username){
          this.tempFlag = true;
          this.setUsername.emit(username);
          this.theusername = username;
-         console.log("the user name is: " + this.theusername);
+      }*/
+      if(myPass === "HMA2018" && username === "HydmechUser"){
+         this.tempFlag = true;
+         this.setUsername.emit(username);
+         this.theusername = username;
       }
     }
     if(this.tempFlag) {

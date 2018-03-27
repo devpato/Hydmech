@@ -13,7 +13,7 @@
 
 
 <ion-content class="backImg">
-          <ion-row style="background-color: black; width: 100% important; heigth: 8px !important;padding-left: 12%; margin-top:5%; ">
+          <ion-row style="background-color: black; width: 100% important; heigth: 8px !important;padding-left: 12%; margin-top:2%; ">
                
         </ion-row>
   <ion-grid text-center class="squareBackground">
@@ -22,31 +22,31 @@
           <p class="inputLabels">Max Material Diameter</p>
       </ion-col>
       <ion-col col-4>
-          <ion-input class="inputValues" type="text" placeholder="Enter value" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValues" type="text" pattern="\d*" placeholder="Enter value" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
       </ion-col>
       <ion-col col-8>
         <p class="inputLabels">Diameter</p>
       </ion-col>
       <ion-col col-4>
-          <ion-input class="inputValues" type="text" placeholder="Enter value" #diamter  [value]="diameterValue" (input)="diameterValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValues" type="text" pattern="\d*" placeholder="Enter value" #diamter  [value]="diameterValue" (input)="diameterValue=$event.target.value" text-center></ion-input>
       </ion-col>
       <ion-col col-8>
         <p class="inputLabels">Cut Length</p>
       </ion-col>
       <ion-col col-4>
-          <ion-input class="inputValues" type="text" placeholder="Enter value" #cutLength  [value]="cutLengthValue" (input)="cutLengthValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValues" type="text" pattern="\d*" placeholder="Enter value" #cutLength  [value]="cutLengthValue" (input)="cutLengthValue=$event.target.value" text-center></ion-input>
       </ion-col>
       <ion-col col-8>
           <p class="inputLabels">Master Bar Length</p>
       </ion-col>
       <ion-col col-4>
-          <ion-input class="inputValues" type="text" placeholder="Enter value" #masterBar  [value]="masterBarValue" (input)="masterBarValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValues" type="text"  pattern="\d*" placeholder="Enter value" #masterBar  [value]="masterBarValue" (input)="masterBarValue=$event.target.value" text-center></ion-input>
       </ion-col>
       <ion-col col-8>
           <p class="inputLabels">Rate per Hour</p>
       </ion-col>
       <ion-col col-4>
-          <ion-input class="inputValues" type="text" placeholder="Enter value" #rate  [value]="rateValue" (input)="rateValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValues" type="text" pattern="\d*" placeholder="Enter value" #rate  [value]="rateValue" (input)="rateValue=$event.target.value" text-center></ion-input>
       </ion-col>
 
       <ion-col col-1>         

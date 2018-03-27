@@ -10,26 +10,32 @@
     </ion-header>
      <ion-content>
         <ion-list padding>
-            <button ion-item (click)="onLoad(mainPage)" no-lines detail-none>
+            <button ion-item  no-lines detail-none (click)="onLoad(mainPage)">
                <ion-icon name="home" item-left color="medium"></ion-icon>
-              Home 
+                Home 
             </button>
-            <button ion-item (click)="onLoad(mainPage)" no-lines detail-none>
-               <ion-icon name="logo-youtube" item-left color="medium"></ion-icon>
-               HYDMECH Videos 
-            </button>
-            <button ion-item (click)="onLoad(settingsPage)" no-lines detail-none>
-               <ion-icon name="ios-image" item-left color="medium"></ion-icon>
-               Saw Gallery
-            </button>
-             <button ion-item (click)="onLoad(settingsPage)" no-lines detail-none>
-              
-               HYDMECH Website
-            </button>
-             <button ion-item (click)="onLoad(settingsPage)" detail-none>
-               
-               Dealer Website
-            </button>
+            <a href="https://www.youtube.com/user/hydmechgroupltd">
+                <button ion-item  no-lines detail-none>
+                <ion-icon name="logo-youtube" item-left color="medium"></ion-icon>
+                HYDMECH Videos 
+                </button>
+            </a>
+            <a href="https://www.flickr.com/photos/hydmech/sets/">
+                <button ion-item no-lines detail-none>
+                <ion-icon name="ios-image" item-left color="medium"></ion-icon>
+                Saw Gallery
+                </button>
+            </a>
+            <a  href="http://www.hydmech.com/">
+                <button ion-item  no-lines detail-none>                
+                HYDMECH Website
+                </button>
+            </a>
+            <a  href="http://www.hydmech.com/dealers/">
+                <button ion-item detail-none>               
+                Dealer Website
+                </button>
+            </a>
            <!-- <button ion-item (click)="onLoad(settingsPage)" detail-none>
                
                Sign Out
@@ -38,11 +44,12 @@
                 Let's Connect!
             </ion-item>
             <ion-item  no-lines detail-none>
-               <ion-icon name="logo-facebook" item-left color="medium"></ion-icon>
-               <ion-icon name="logo-twitter" item-left color="medium"></ion-icon>
-               <ion-icon name="logo-linkedin" item-left color="medium"></ion-icon>
+               <a href="http://www.facebook.com/hydmech"><ion-icon name="logo-facebook" item-left color="medium"></ion-icon></a>
+               <a href="http://twitter.com/hydmech"><ion-icon name="logo-twitter" item-left color="medium"></ion-icon></a>
+               <a href="https://www.linkedin.com/company/hyd-mech-group-limited"><ion-icon name="logo-linkedin" item-left color="medium"></ion-icon></a>
             </ion-item>
         </ion-list>
     </ion-content>
 </ion-menu>
 <ion-nav [root]="rootPage" #nav></ion-nav>
+
