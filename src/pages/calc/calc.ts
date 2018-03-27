@@ -44,7 +44,7 @@ export class CalcPage {
     console.log(Number(this.rateValue)/100);
     console.log("Selected :" + this.toolsValue);
 
-    if(this.maxMaterialValue != 0 || this.diameterValue != 0 || this.cutLengthValue != 0 || this.masterBarValue != 0 || this.toolsValue != 0 || this.rateValue != 0) {
+    if(this.maxMaterialValue != 0 || this.diameterValue != 0 || this.cutLengthValue != 0 || this.masterBarValue != 0  || this.rateValue != 0) {
         this.variables.setDiameter(this.meType === 'imperial' ? Number(this.diameterValue/25.4) : Number(this.diameterValue));
         this.variables.setMaterialDiameter(this.meType === 'imperial' ? Number(this.maxMaterialValue/25.4) : Number(this.maxMaterialValue) );
         if( this.toolsValue == 1) {

@@ -58,7 +58,8 @@ export class HomePage {
           {
             text: 'Close',
             handler: ()=> {
-              this.passValue = '';              
+              this.passValue = '';
+              this.userValue = '';              
             }
           }
         ]
