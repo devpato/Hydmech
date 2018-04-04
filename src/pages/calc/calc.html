@@ -13,31 +13,31 @@
 
 
 <ion-content class="backImg">
-          <ion-row style="background-color: black; width: 100% important; heigth: 8px !important;padding-left: 12%; margin-top:2%; ">
+        <ion-row style="background-color: black; width: 100% important; heigth: 8px !important;padding-left: 12%; margin-top:2%; ">
                
         </ion-row>
   <ion-grid text-center class="squareBackground">
     <ion-row>
       <ion-col col-8>
-          <p class="inputLabels">Max Material Diameter</p>
+          <p class="inputLabels">Max Material Diameter ({{mesType}})</p>
       </ion-col>
       <ion-col col-4>
           <ion-input class="inputValues" type="number" pattern="\d*" placeholder="Enter value" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
       </ion-col>
       <ion-col col-8>
-        <p class="inputLabels">Diameter</p>
+        <p class="inputLabels">Diameter ({{mesType}})</p>
       </ion-col>
       <ion-col col-4>
           <ion-input class="inputValues" type="number" pattern="\d*" placeholder="Enter value" #diamter  [value]="diameterValue" (input)="diameterValue=$event.target.value" text-center></ion-input>
       </ion-col>
       <ion-col col-8>
-        <p class="inputLabels">Cut Length</p>
+        <p class="inputLabels">Cut Length ({{mesType}})</p>
       </ion-col>
       <ion-col col-4>
           <ion-input class="inputValues" type="number" pattern="\d*" placeholder="Enter value" #cutLength  [value]="cutLengthValue" (input)="cutLengthValue=$event.target.value" text-center></ion-input>
       </ion-col>
       <ion-col col-8>
-          <p class="inputLabels">Master Bar Length</p>
+          <p class="inputLabels"> Stock Length ({{mesType}})</p>
       </ion-col>
       <ion-col col-4>
           <ion-input class="inputValues" type="number"  pattern="\d*" placeholder="Enter value" #masterBar  [value]="masterBarValue" (input)="masterBarValue=$event.target.value" text-center></ion-input>
@@ -49,37 +49,23 @@
           <ion-input class="inputValues" type="number" pattern="\d*" placeholder="Enter value" #rate  [value]="rateValue" (input)="rateValue=$event.target.value" text-center></ion-input>
       </ion-col>
 
-      <ion-col col-1>         
+
+      <ion-col col-12>
+          <p class="inputLabels" style="width:100%;">Material Grade</p>          
       </ion-col>
-      <ion-col col-10>
-          <p class="inputLabels" style="width:100%%;">Material Grade</p>          
-      </ion-col>
-      <ion-col col-1>         
-      </ion-col>
-      <ion-row style="margin-top:-30px !important;">
-      <ion-col col-1>         
-      </ion-col>
-      <ion-col col-10>
-        <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt"style="width: 100%;">
-            <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
-            <ion-option value="1">Carbon/Forging Grades - 1145, 1215, 1008, 1018, 4140, 4340, 8620</ion-option>
-            <ion-option value="2">300 Series Stainless - 304, 316, 321</ion-option>
-            <ion-option value="3">400 Series Stainless - 410, 420, 440</ion-option>
-            <ion-option value="4">Tool Steel - A2, D2, H13</ion-option>
-            <ion-option value="5">Nonferrous - Aluminum, Brass, Copper</ion-option>
-            <ion-option value="6">Carbon Tube</ion-option>
-        </ion-select>
-      </ion-col>
-      <ion-col col-1>         
-      </ion-col>
-        <ion-col col-1>         
+        <ion-col col-12>
+            <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-30px !important;">
+                <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
+                <ion-option value="1">Carbon/Forging Grades - 1145, 1215, 1008, 1018, 4140, 4340, 8620</ion-option>
+                <ion-option value="2">300 Series Stainless - 304, 316, 321</ion-option>
+                <ion-option value="3">400 Series Stainless - 410, 420, 440</ion-option>
+                <ion-option value="4">Tool Steel - A2, D2, H13</ion-option>
+                <ion-option value="5">Nonferrous - Aluminum, Brass, Copper</ion-option>
+                <ion-option value="6">Carbon Tube</ion-option>
+            </ion-select>
+             <button ion-button  id="calculate" class="buttonPrimary" (click)="openResultsPage()" style="width: 100%;">CALCULATE</button>
         </ion-col>
-        <ion-col col-10>
-            <button ion-button  id="calculate" class="buttonPrimary" (click)="openResultsPage()" style="width: 280px;">CALCULATE</button>
-        </ion-col>
-        <ion-col col-1>         
-        </ion-col>
-        </ion-row>
+        
     </ion-row>
   </ion-grid>
 </ion-content>

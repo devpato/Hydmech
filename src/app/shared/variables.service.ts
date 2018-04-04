@@ -229,7 +229,7 @@ export class VariablesService {
 
     //Machine
     setMachine(maxdiameter) {
-        var tempMachineTable = this.machineTable;
+        var tempMachineTable = this.machineTable.slice().reverse();
         for(var i = 0; i<tempMachineTable.length ; i++) {
            if(maxdiameter <= tempMachineTable[i].maxBarDiameter) {
                this.machine = tempMachineTable[i].id;

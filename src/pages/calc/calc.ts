@@ -12,14 +12,15 @@ import {VariablesService} from '../../app/shared/variables.service'
 })
 export class CalcPage {
   resultsPage = ResultsPage;
-  maxMaterialValue: number = 0;
-  diameterValue: number = 0;
-  cutLengthValue: number = 0;
-  masterBarValue: number = 0;
+  maxMaterialValue: number;
+  diameterValue: number;
+  cutLengthValue: number;
+  masterBarValue: number;
   toolsValue:number; 
-  rateValue: number = 0;
+  rateValue: number;
   genericRow: any;
   meType;
+  mesType;
   
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private measuretype: MeasureTypeService, private calctype: CalcTypeService, private variables: VariablesService,
@@ -34,15 +35,16 @@ export class CalcPage {
     this.meType = this.measuretype.getMeasureType();
     console.log(this.meType);
     console.log(this.calctype.getCalcType());
+    this.mesType = this.meType === 'imperial' ? 'in' : 'mm';
   }
 
   openResultsPage() {
-    console.log(this.maxMaterialValue);
+    /*console.log(this.maxMaterialValue);
     console.log(this.diameterValue);
     console.log(this.cutLengthValue);
     console.log(this.masterBarValue);
     console.log(Number(this.rateValue)/100);
-    console.log("Selected :" + this.toolsValue);
+    console.log("Selected :" + this.toolsValue);*/
 
     if(this.maxMaterialValue != 0 || this.diameterValue != 0 || this.cutLengthValue != 0 || this.masterBarValue != 0  || this.rateValue != 0) {
         this.variables.setDiameter(this.meType === 'imperial' ? Number(this.diameterValue/25.4) : Number(this.diameterValue));
