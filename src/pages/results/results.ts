@@ -18,9 +18,9 @@ import {CalcPage} from '../calc/calc';
 export class ResultsPage {
   machine = this.variables.getMachine();
   cycleTime = this.variables.getCycleTime();
-  rph = this.variables.getRatePerHour() ;
+  rph = Number(this.variables.getRatePerHour())*100 + "%" ;
   pph = this.variables.getPCSHour();
-  rpm = this.variables.getRPM();
+  rpm = Number(this.variables.getRPM());
   bladeSpeed = this.variables.getBladeSpeed();
   toothLoad : any;
   cutTime = this.variables.getCutTime();
@@ -55,6 +55,8 @@ export class ResultsPage {
     console.log(this.variables.getCycleTime());
     console.log('PCS Hour');
     console.log(this.variables.getPCSHour());
+    console.log('Blade Speed');
+    console.log(this.variables.getBladeSpeed());
 
     if( this.toolsValue == 1) {
           this.variables.populateTable(this.variables.getMaterialDiameter());          
