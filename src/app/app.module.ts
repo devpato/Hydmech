@@ -10,6 +10,7 @@ import { CalcPage } from '../pages/calc/calc';
 import { MainPage } from '../pages/main/main';
 import { SawTypePage } from '../pages/saw-type/saw-type';
 import {ResultsPage} from '../pages/results/results';
+import {AutomaticPage} from '../pages/automatic/automatic';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import {RoundsawPage} from '../pages/roundsaw/roundsaw';
@@ -30,7 +31,8 @@ import {VariablesService} from './shared/variables.service';
     FacebookPage,
     CalcPage,
     ResultsPage,
-    SawTypePage
+    SawTypePage,
+    AutomaticPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import {VariablesService} from './shared/variables.service';
     FacebookPage,
     CalcPage,
     ResultsPage,
-    SawTypePage
+    SawTypePage,
+    AutomaticPage
   ],
   providers: [
     StatusBar,

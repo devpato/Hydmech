@@ -7,6 +7,7 @@ import {MeasuretypePage} from '../pages/measuretype/measuretype';
 import {ResultsPage} from '../pages/results/results';
 import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
+import {AutomaticPage} from '../pages/automatic/automatic';
 import {UserService} from './shared/user.service';
 @Component({
   templateUrl: 'app.html'

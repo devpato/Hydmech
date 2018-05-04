@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AutomaticPage } from '../automatic/automatic';
 
 /**
  * Generated class for the SawTypePage page.
@@ -14,12 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'saw-type.html',
 })
 export class SawTypePage {
-
+  autoPage = AutomaticPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SawTypePage');
+  }
+
+  openAutomaticPage() {
+    this.navCtrl.push(this.autoPage);
   }
 
 }
