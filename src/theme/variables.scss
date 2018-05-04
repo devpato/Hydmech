@@ -54,16 +54,12 @@ $TOP_COLOR_DARK: #524F4B;
 }
 
 .buttonSecondary {
-  background: $TOP_COLOR; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($TOP_COLOR_DARK, $BOTTOM_COLOR_DARK); 
+  background-color: black; /* For browsers that do not support gradients */
   font-weight: bolder;
   border: 1px outset black;
   border-radius: 0px !important;
   font-size: 14px !important;
-  color: $BOTTOM_COLOR !important;
+  color: #FFD41D !important;
 }
 
 .selectOpt {

@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
 import { MainPage } from '../pages/main/main';
+import { SawTypePage } from '../pages/saw-type/saw-type';
 import {ResultsPage} from '../pages/results/results';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
@@ -28,7 +29,8 @@ import {VariablesService} from './shared/variables.service';
     MeasuretypePage,
     FacebookPage,
     CalcPage,
-    ResultsPage
+    ResultsPage,
+    SawTypePage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import {VariablesService} from './shared/variables.service';
     MeasuretypePage,
     FacebookPage,
     CalcPage,
-    ResultsPage
+    ResultsPage,
+    SawTypePage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,58 @@
+<!--
+  Generated template for the MeasuretypePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title text-center>
+            <img src="assets/img/hydemech.png" style="width: 190px;"/>
+        </ion-title>
+        <ion-buttons end>
+        <button ion-button (click)="onOpenMenu()">
+            <ion-icon name="menu" style="color: white !important;"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding-bottom  class="backImg">
+    <ion-row style="margin-top: 8%;">          
+        <ion-col text-center>
+            <label class="labelTitles">SAW TYPE</label> 
+        </ion-col>     
+      </ion-row>
+    <ion-grid text-left>
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openPage('imperial')">
+            <strong><p>HORIZONTAL</p></strong>
+        </button>
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openPage('metric')">
+           <strong><p>VERTICAL</p></strong>
+        </button>
+    </ion-grid>
+      <hr style="border-color: white;color:white; border-style:solid;">
+      <ion-row style="margin-top: 2%;">          
+        <ion-col text-center>
+            <label class="labelTitles">MACHINE FORMAT</label> 
+        </ion-col>     
+      </ion-row>
+      <ion-grid text-left>
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openPage('imperial')">
+            <strong><p>AUTOMATIC</p></strong>
+        </button>
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openPage('metric')">
+           <strong><p>MANUAL</p></strong>
+        </button>
+    </ion-grid>
+    <ion-grid text-right>
+        <button ion-button class="buttonSecondary" style="width: 25%; margin-left:70%; margin-top: 10%; float:right; background-color: black; /* For browsers that do not support gradients */
+  font-weight: bolder;
+  border: 1px outset black;
+  border-radius: 0px !important;
+  font-size: 14px !important;
+  color: #FFD41D !important;" (click)="openPage('imperial')">
+            <strong><p>NEXT</p></strong>
+        </button>
+    </ion-grid>
+</ion-content>
