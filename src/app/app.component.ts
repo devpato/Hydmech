@@ -3,8 +3,8 @@ import { Platform, NavController, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MainPage } from '../pages/main/main';
-import {MeasuretypePage} from '../pages/measuretype/measuretype';
-import {ResultsPage} from '../pages/results/results';
+import { MeasuretypePage } from '../pages/measuretype/measuretype';
+import { ResultsPage } from '../pages/results/results';
 import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
 import {AutomaticPage} from '../pages/automatic/automatic';
@@ -15,7 +15,7 @@ import {UserService} from './shared/user.service';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = VerticalPage; // don't forget to change it to HomePage so home because the first page in the app
+  rootPage:any = HorizontalPage; // don't forget to change it to HomePage so home because the first page in the app
   mainPage = MainPage;
   settingsPage = ResultsPage;
   username : string;
