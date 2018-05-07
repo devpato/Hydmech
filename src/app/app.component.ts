@@ -4,18 +4,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MainPage } from '../pages/main/main';
 import { MeasuretypePage } from '../pages/measuretype/measuretype';
+import { BladetypePage } from '../pages/bladetype/bladetype';
 import { ResultsPage } from '../pages/results/results';
 import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
-import {AutomaticPage} from '../pages/automatic/automatic';
-import {HorizontalPage} from '../pages/horizontal/horizontal';
-import {VerticalPage} from '../pages/vertical/vertical';
-import {UserService} from './shared/user.service';
+import { AutomaticPage } from '../pages/automatic/automatic';
+import { HorizontalPage } from '../pages/horizontal/horizontal';
+import { VerticalPage } from '../pages/vertical/vertical';
+import { UserService } from './shared/user.service';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HorizontalPage; // don't forget to change it to HomePage so home because the first page in the app
+  rootPage:any = BladetypePage; // don't forget to change it to HomePage so home because the first page in the app
   mainPage = MainPage;
   settingsPage = ResultsPage;
   username : string;

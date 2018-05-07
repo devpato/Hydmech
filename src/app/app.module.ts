@@ -13,6 +13,7 @@ import { ResultsPage } from '../pages/results/results';
 import { AutomaticPage } from '../pages/automatic/automatic';
 import { VerticalPage } from '../pages/vertical/vertical';
 import { HorizontalPage } from '../pages/horizontal/horizontal';
+import { BladetypePage } from '../pages/bladetype/bladetype';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { RoundsawPage } from '../pages/roundsaw/roundsaw';
@@ -36,7 +37,8 @@ import { VariablesService } from './shared/variables.service';
     SawTypePage,
     AutomaticPage,
     VerticalPage,
-    HorizontalPage
+    HorizontalPage,
+    BladetypePage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { VariablesService } from './shared/variables.service';
     SawTypePage,
     AutomaticPage,
     VerticalPage,
-    HorizontalPage
+    HorizontalPage,
+    BladetypePage
   ],
   providers: [
     StatusBar,
