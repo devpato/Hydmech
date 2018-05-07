@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MainPage } from '../pages/main/main';
 import { MeasuretypePage } from '../pages/measuretype/measuretype';
 import { BladetypePage } from '../pages/bladetype/bladetype';
+import { ProductivityPage } from '../pages/productivity/productivity';
 import { ResultsPage } from '../pages/results/results';
 import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
@@ -16,7 +17,7 @@ import { UserService } from './shared/user.service';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = BladetypePage; // don't forget to change it to HomePage so home because the first page in the app
+  rootPage:any = ProductivityPage; // don't forget to change it to HomePage so home because the first page in the app
   mainPage = MainPage;
   settingsPage = ResultsPage;
   username : string;
