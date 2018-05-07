@@ -15,6 +15,7 @@ import { VerticalPage } from '../pages/vertical/vertical';
 import { HorizontalPage } from '../pages/horizontal/horizontal';
 import { BladetypePage } from '../pages/bladetype/bladetype';
 import { BalacebladePage } from '../pages/balaceblade/balaceblade';
+import { MaximumpartsPage } from '../pages/maximumparts/maximumparts';
 import { ProductivityPage } from '../pages/productivity/productivity';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
@@ -42,7 +43,8 @@ import { VariablesService } from './shared/variables.service';
     HorizontalPage,
     BladetypePage,
     ProductivityPage,
-    BalacebladePage
+    BalacebladePage,
+    MaximumpartsPage
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ import { VariablesService } from './shared/variables.service';
     HorizontalPage,
     BladetypePage,
     ProductivityPage,
-    BalacebladePage
+    BalacebladePage,
+    MaximumpartsPage
   ],
   providers: [
     StatusBar,
