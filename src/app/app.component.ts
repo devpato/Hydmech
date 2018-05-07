@@ -8,6 +8,7 @@ import {ResultsPage} from '../pages/results/results';
 import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
 import {AutomaticPage} from '../pages/automatic/automatic';
+import {HorizontalPage} from '../pages/horizontal/horizontal';
 import {VerticalPage} from '../pages/vertical/vertical';
 import {UserService} from './shared/user.service';
 @Component({

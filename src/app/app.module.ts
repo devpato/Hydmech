@@ -9,18 +9,18 @@ import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
 import { MainPage } from '../pages/main/main';
 import { SawTypePage } from '../pages/saw-type/saw-type';
-import {ResultsPage} from '../pages/results/results';
-import {AutomaticPage} from '../pages/automatic/automatic';
-import {VerticalPage} from '../pages/vertical/vertical';
+import { ResultsPage } from '../pages/results/results';
+import { AutomaticPage } from '../pages/automatic/automatic';
+import { VerticalPage } from '../pages/vertical/vertical';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import {RoundsawPage} from '../pages/roundsaw/roundsaw';
-import {MeasuretypePage} from '../pages/measuretype/measuretype';
-import {MeasureTypeService} from './shared/measuretype.service';
-import {CalcTypeService} from './shared/calctype.service';
-import {UserService} from './shared/user.service'; 
-import {TableService} from './shared/table.service';
-import {VariablesService} from './shared/variables.service'; 
+import { RoundsawPage } from '../pages/roundsaw/roundsaw';
+import { MeasuretypePage } from '../pages/measuretype/measuretype';
+import { MeasureTypeService } from './shared/measuretype.service';
+import { CalcTypeService } from './shared/calctype.service';
+import { UserService} from './shared/user.service'; 
+import { TableService } from './shared/table.service';
+import { VariablesService } from './shared/variables.service'; 
 
 @NgModule({
   declarations: [
