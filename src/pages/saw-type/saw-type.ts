@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { AutomaticPage } from '../automatic/automatic';
 
 /**
@@ -16,7 +16,7 @@ import { AutomaticPage } from '../automatic/automatic';
 })
 export class SawTypePage {
   autoPage = AutomaticPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -25,6 +25,10 @@ export class SawTypePage {
 
   openAutomaticPage() {
     this.navCtrl.push(this.autoPage);
+  }
+
+  onOpenMenu(){
+    this.menuCtrl.open();    
   }
 
 }
