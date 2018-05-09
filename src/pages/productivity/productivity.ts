@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { MaximumpartsPage } from '../maximumparts/maximumparts';
+import { BalacebladePage } from '../balaceblade/balaceblade';
 
 
 /**
@@ -15,7 +17,8 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
   templateUrl: 'productivity.html',
 })
 export class ProductivityPage {
-
+  maxPage = MaximumpartsPage;
+  balaePage = BalacebladePage;
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
   }
 
@@ -25,5 +28,11 @@ export class ProductivityPage {
 
   onOpenMenu(){
     this.menuCtrl.open();    
+  }
+
+  openPage(resultsFor : String) {
+    let page : any;
+    resultsFor === 'maximum' ? page = this.maxPage : page = this.balaePage;
+    this.navCtrl.push(page);
   }
 }
