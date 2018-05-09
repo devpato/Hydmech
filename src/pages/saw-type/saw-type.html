@@ -24,10 +24,10 @@
         </ion-col>     
       </ion-row>
     <ion-grid text-left>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openPage('imperial')">
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setMyOrientation('horizontal')">
             <strong><p>HORIZONTAL</p></strong>
         </button>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openPage('metric')">
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setMyOrientation('vertical')">
            <strong><p>VERTICAL</p></strong>
         </button>
     </ion-grid>
@@ -38,10 +38,10 @@
         </ion-col>     
       </ion-row>
       <ion-grid text-left>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openPage('imperial')">
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setManualAuto('auto')">
             <strong><p>AUTOMATIC</p></strong>
         </button>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="openPage('metric')">
+        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setManualAuto('manual')">
            <strong><p>MANUAL</p></strong>
         </button>
     </ion-grid>

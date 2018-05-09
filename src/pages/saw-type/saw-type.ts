@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { AutomaticPage } from '../automatic/automatic';
+import { HorizontalPage } from '../horizontal/horizontal';
+import { VerticalPage } from '../vertical/vertical';
+import { BandsawService }  from '../../app/shared/bandsaw.service'
 
 /**
  * Generated class for the SawTypePage page.
@@ -16,15 +19,38 @@ import { AutomaticPage } from '../automatic/automatic';
 })
 export class SawTypePage {
   autoPage = AutomaticPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
+  horizontalPage = HorizontalPage;
+  verticalPage = VerticalPage;
+  autoManual : String;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bandsawService : BandsawService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SawTypePage');
   }
+ 
+  setManualAuto(type : String) {
+    this.autoManual = type;
+  }
+
+  getManualAuto() {
+    return this.autoManual;
+  }
+
+  setMyOrientation(orientation : String) {
+    this.bandsawService.setOrinentation(orientation);
+  }
 
   openAutomaticPage() {
-    this.navCtrl.push(this.autoPage);
+    if(this.getManualAuto() === 'auto') {
+      this.navCtrl.push(this.autoPage);
+    } else {
+       if(this.bandsawService.getOrinentation() === 'horizontal') {
+         this.navCtrl.push(this.horizontalPage);
+       } else {
+         this.navCtrl.push(this.verticalPage);
+       }
+    }
   }
 
   onOpenMenu(){

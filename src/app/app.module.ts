@@ -26,6 +26,7 @@ import { CalcTypeService } from './shared/calctype.service';
 import { UserService} from './shared/user.service'; 
 import { TableService } from './shared/table.service';
 import { VariablesService } from './shared/variables.service'; 
+import { BandsawService } from './shared/bandsaw.service'; 
 
 @NgModule({
   declarations: [
@@ -75,7 +76,7 @@ import { VariablesService } from './shared/variables.service';
     SplashScreen,
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MeasureTypeService,CalcTypeService, UserService,TableService,VariablesService
+    MeasureTypeService,CalcTypeService, UserService,TableService,VariablesService, BandsawService
   ]
 })
 export class AppModule {}

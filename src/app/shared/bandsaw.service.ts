@@ -8,7 +8,7 @@ export class BandsawService {
         this.orientation = orientation;
     }
     
-    getOrinentation(orientation) {
-        this.orientation = orientation;
+    getOrinentation() {
+       return this.orientation;
     }
 }
