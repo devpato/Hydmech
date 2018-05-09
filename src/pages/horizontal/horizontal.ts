@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-
+import { BladetypePage } from '../bladetype/bladetype';
 /**
  * Generated class for the HorizontalPage page.
  *
@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
   templateUrl: 'horizontal.html',
 })
 export class HorizontalPage {
-
+  bladeTypePage = BladetypePage;
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
   }
 
@@ -24,6 +24,10 @@ export class HorizontalPage {
 
   onOpenMenu(){
     this.menuCtrl.open();    
+  }
+
+  openPage() {
+    this.navCtrl.push(this.bladeTypePage);
   }
 
 }
