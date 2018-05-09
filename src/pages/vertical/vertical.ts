@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-
+import { BladetypePage } from '../bladetype/bladetype';
 /**
  * Generated class for the VerticalPage page.
  *
@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
   templateUrl: 'vertical.html',
 })
 export class VerticalPage {
-
+ bladeTypePage = BladetypePage;
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
   }
 
@@ -26,4 +26,7 @@ export class VerticalPage {
     this.menuCtrl.open();    
   }
 
+  openPage() {
+    this.navCtrl.push(this.bladeTypePage);
+  }
 }
