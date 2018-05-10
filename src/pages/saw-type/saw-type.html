@@ -24,34 +24,29 @@
         </ion-col>     
       </ion-row>
     <ion-grid text-left>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setMyOrientation('horizontal')">
+        <button ion-button color="primary" [ngClass]="horizontal ? 'buttonPrimary' : 'nextButton'"  style="width: 78%; margin-left:10%; margin-top: 5%;" (click)="setMyOrientation('horizontal')">
             <strong><p>HORIZONTAL</p></strong>
         </button>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setMyOrientation('vertical')">
+        <button ion-button color="primary" [ngClass]="vertical ? 'buttonPrimary' : 'nextButton'"  style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setMyOrientation('vertical')">
            <strong><p>VERTICAL</p></strong>
         </button>
     </ion-grid>
-      <hr style="border-color: white;color:white; border-style:solid;">
-      <ion-row style="margin-top: 2%;">          
+
+      <ion-row style="margin-top: 10%;">          
         <ion-col text-center>
             <label class="labelTitles">MACHINE FORMAT</label> 
         </ion-col>     
       </ion-row>
       <ion-grid text-left>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setManualAuto('auto')">
+        <button ion-button color="primary" [ngClass]="auto ? 'buttonPrimary' : 'nextButton'" style="width: 78%; margin-left:10%; margin-top: 5%;" (click)="setManualAuto('auto')">
             <strong><p>AUTOMATIC</p></strong>
         </button>
-        <button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setManualAuto('manual')">
+        <button ion-button color="primary"  [ngClass]="manual ? 'buttonPrimary' : 'nextButton'"  style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="setManualAuto('manual')">
            <strong><p>MANUAL</p></strong>
         </button>
     </ion-grid>
     <ion-grid text-right>
-        <button ion-button class="buttonSecondary" style="width: 25%; margin-left:70%; margin-top: 10%; float:right; background-color: black; /* For browsers that do not support gradients */
-  font-weight: bolder;
-  border: 1px outset black;
-  border-radius: 0px !important;
-  font-size: 14px !important;
-  color: #FFD41D !important;" (click)="openAutomaticPage()">
+        <button ion-button class="buttonSecondary nextButton" style="" (click)="openAutomaticPage()">
             <strong><p>NEXT</p></strong>
         </button>
     </ion-grid>

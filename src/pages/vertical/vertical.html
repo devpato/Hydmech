@@ -18,33 +18,25 @@
 </ion-header>
 
 <ion-content padding-bottom  class="backImg">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <ion-grid text-center>
       <strong><p style="color: #FFD41D; margin:0;">Material Height (In)</p></strong>
       <ion-col col-12>
           <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
       </ion-col>
-       <strong><p style="color: #FFD41D;">Material Group</p></strong>
+       <strong><p style="color: #FFD41D;margin:0;">Material Group</p></strong>
       <ion-col col-12>
-            <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-12px !important;">
+            <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-0px !important;">
                 <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
-                <ion-option value="1">Carbon/Forging Grades - 1145, 1215, 1008, 1018, 4140, 4340, 8620</ion-option>
-                <ion-option value="2">300 Series Stainless - 304, 316, 321</ion-option>
-                <ion-option value="3">400 Series Stainless - 410, 420, 440</ion-option>
-                <ion-option value="4">Tool Steel - A2, D2, H13</ion-option>
-                <ion-option value="5">Nonferrous - Aluminum, Brass, Copper</ion-option>
-                <ion-option value="6">Carbon Tube</ion-option>
             </ion-select>
         </ion-col>        
-      <strong><p style="color: #FFD41D;">Material Shape</p></strong>
+      <strong><p style="color: #FFD41D;margin:0;">Material Shape</p></strong>
        <ion-col col-12>
-            <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-12px !important;">
+            <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-0px !important;">
                 <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
-                <ion-option value="1">Carbon/Forging Grades - 1145, 1215, 1008, 1018, 4140, 4340, 8620</ion-option>
-                <ion-option value="2">300 Series Stainless - 304, 316, 321</ion-option>
-                <ion-option value="3">400 Series Stainless - 410, 420, 440</ion-option>
-                <ion-option value="4">Tool Steel - A2, D2, H13</ion-option>
-                <ion-option value="5">Nonferrous - Aluminum, Brass, Copper</ion-option>
-                <ion-option value="6">Carbon Tube</ion-option>
             </ion-select>
         </ion-col>
        <strong><p style="color: #FFD41D;margin:0;">Stock Length (In)</p></strong>

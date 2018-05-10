@@ -22,6 +22,10 @@ export class SawTypePage {
   horizontalPage = HorizontalPage;
   verticalPage = VerticalPage;
   autoManual : String;
+  auto = true;
+  manual = true;
+  horizontal = true;
+  vertical = true;
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bandsawService : BandsawService) {
   }
 
@@ -31,6 +35,13 @@ export class SawTypePage {
  
   setManualAuto(type : String) {
     this.autoManual = type;
+    if(type === 'auto') {
+      this.auto = false;
+      this.manual = true;
+    } else {
+      this.auto = true;
+      this.manual = false;
+    }
   }
 
   getManualAuto() {
@@ -39,6 +50,13 @@ export class SawTypePage {
 
   setMyOrientation(orientation : String) {
     this.bandsawService.setOrinentation(orientation);
+     if(orientation === 'vertical') {
+      this.vertical = false;
+      this.horizontal = true;
+    } else {
+     this.vertical = true;
+      this.horizontal = false;
+    }
   }
 
   openAutomaticPage() {
