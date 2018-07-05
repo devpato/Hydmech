@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import {BladeTypeService} from '../../app/shared/bladetype.service';
+import { MaterialgroupPage } from '../materialgroup/materialgroup';
 /**
  * Generated class for the BladetypePage page.
  *
@@ -15,11 +16,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BladetypePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  private menuCtrl: MenuController, private bladeType : BladeTypeService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BladetypePage');
+  }
+
+   openPage ( bladeType: string) {
+      this.openMaterialGroupPage(bladeType);
+  }
+
+  openMaterialGroupPage(bladeType: string) {
+      this.bladeType.setBladeType(bladeType);
+      this.navCtrl.push(MaterialgroupPage);   
+  }
+
+  onOpenMenu(){
+    this.menuCtrl.open();    
   }
 
 }
