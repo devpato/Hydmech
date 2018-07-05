@@ -72,7 +72,8 @@ import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
     BladetypePage,
     ProductivityPage,
     BalacebladePage,
-    MaximumpartsPage
+    MaximumpartsPage,
+    MaterialgroupPage
   ],
   providers: [
     StatusBar,
