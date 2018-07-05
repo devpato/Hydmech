@@ -26,13 +26,7 @@
       <strong><p style="color: #FFD41D; margin:0;">Material Width (In)</p></strong>
       <ion-col col-12>
           <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
-      </ion-col>
-       <strong><p style="color: #FFD41D;margin:0;">Material Group</p></strong>
-      <ion-col col-12>
-            <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-0px !important;">
-                <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
-            </ion-select>
-        </ion-col>        
+      </ion-col>     
       <strong><p style="color: #FFD41D;margin:0;">Material Shape</p></strong>
        <ion-col col-12>
             <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-0px !important;">
