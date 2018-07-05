@@ -18,7 +18,7 @@ import { BalacebladePage } from '../balaceblade/balaceblade';
 })
 export class ProductivityPage {
   maxPage = MaximumpartsPage;
-  balaePage = BalacebladePage;
+  balancePage = BalacebladePage;
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
   }
 
@@ -32,7 +32,7 @@ export class ProductivityPage {
 
   openPage(resultsFor : String) {
     let page : any;
-    resultsFor === 'maximum' ? page = this.maxPage : page = this.balaePage;
+    resultsFor === 'maximum' ? page = this.maxPage : page = this.balancePage;
     this.navCtrl.push(page);
   }
 }
