@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-import { ProductivityPage } from '../productivity/productivity';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the BladetypePage page.
@@ -15,20 +14,12 @@ import { ProductivityPage } from '../productivity/productivity';
   templateUrl: 'bladetype.html',
 })
 export class BladetypePage {
-  productivityPage = ProductivityPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BladetypePage');
-  }
-
-  onOpenMenu(){
-    this.menuCtrl.open();    
-  }
-
-  openPage(bladeType : String) {
-    this.navCtrl.push(this.productivityPage);
   }
 
 }
