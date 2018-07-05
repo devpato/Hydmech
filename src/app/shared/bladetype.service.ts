@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class BladetypeService {
+export class BladeTypeService {
     bladeType: string;
 
     setBladeType(bladeType) {
