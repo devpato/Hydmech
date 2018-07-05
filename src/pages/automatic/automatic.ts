@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { BandsawService }  from '../../app/shared/bandsaw.service'
-import { HorizontalPage } from '../horizontal/horizontal';
-import { VerticalPage } from '../vertical/vertical';
+import { BladetypePage } from '../bladetype/bladetype';
 
 /**
  * Generated class for the AutomaticPage page.
@@ -17,8 +16,7 @@ import { VerticalPage } from '../vertical/vertical';
   templateUrl: 'automatic.html',
 })
 export class AutomaticPage {
-  horizontalPage = HorizontalPage;
-  verticalPage = VerticalPage;
+  bladeType = BladetypePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bandsawService : BandsawService) {
   }
@@ -32,11 +30,7 @@ export class AutomaticPage {
   }
 
   openPage() {
-    if(this.bandsawService.getOrinentation() === 'horizontal') {
-         this.navCtrl.push(this.horizontalPage);
-    } else {
-        this.navCtrl.push(this.verticalPage);
-    }
+      this.navCtrl.push(this.bladeType);
   }
 
 }
