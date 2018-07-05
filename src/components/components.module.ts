@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BladetypeComponent } from './bladetype/bladetype';
+
 @NgModule({
-	declarations: [BladetypeComponent],
+	declarations: [],
 	imports: [],
-	exports: [BladetypeComponent]
+	exports: []
 })
 export class ComponentsModule {}
