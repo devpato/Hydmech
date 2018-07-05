@@ -4,7 +4,7 @@ import { AutomaticPage } from '../automatic/automatic';
 import { HorizontalPage } from '../horizontal/horizontal';
 import { VerticalPage } from '../vertical/vertical';
 import { BandsawService }  from '../../app/shared/bandsaw.service'
-
+import { BladetypePage } from '../bladetype/bladetype';
 /**
  * Generated class for the SawTypePage page.
  *
@@ -63,11 +63,12 @@ export class SawTypePage {
     if(this.getManualAuto() === 'auto') {
       this.navCtrl.push(this.autoPage);
     } else {
-       if(this.bandsawService.getOrinentation() === 'horizontal') {
+      /* if(this.bandsawService.getOrinentation() === 'horizontal') {
          this.navCtrl.push(this.horizontalPage);
        } else {
          this.navCtrl.push(this.verticalPage);
-       }
+       }*/
+       this.navCtrl.push(BladetypePage)
     }
   }
 

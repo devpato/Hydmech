@@ -27,6 +27,8 @@ import { UserService} from './shared/user.service';
 import { TableService } from './shared/table.service';
 import { VariablesService } from './shared/variables.service'; 
 import { BandsawService } from './shared/bandsaw.service'; 
+import { BladeTypeService } from './shared/bladetype.service'; 
+import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { BandsawService } from './shared/bandsaw.service';
     BladetypePage,
     ProductivityPage,
     BalacebladePage,
-    MaximumpartsPage
+    MaximumpartsPage,
+    MaterialgroupPage
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,7 @@ import { BandsawService } from './shared/bandsaw.service';
     SplashScreen,
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MeasureTypeService,CalcTypeService, UserService,TableService,VariablesService, BandsawService
+    MeasureTypeService,CalcTypeService, UserService,TableService,VariablesService, BandsawService,BladeTypeService
   ]
 })
 export class AppModule {}
