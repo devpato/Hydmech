@@ -54,7 +54,6 @@ export class MaterialgroupPage {
     } else {
        this.deleteKey('B')
     }
-    console.log(this.groupTemp);
   }
 
   getBimetalGroups() {
@@ -71,7 +70,6 @@ export class MaterialgroupPage {
   }
 
   deleteKey(key) {
-    console.log(key)
     for(var i = 0; i<this.groupTemp.length;i++) {
         delete this.groupTemp[i][key]
     }
