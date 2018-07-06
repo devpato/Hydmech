@@ -15,6 +15,8 @@ import { AutomaticPage } from '../pages/automatic/automatic';
 import { HorizontalPage } from '../pages/horizontal/horizontal';
 import { VerticalPage } from '../pages/vertical/vertical';
 import { UserService } from './shared/user.service';
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -26,19 +28,20 @@ export class MyApp {
   @ViewChild('nav') nav: NavController;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
   private menuCtrl: MenuController,
-  private userService: UserService) {   
+  private userService: UserService
+ ) {   
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
-      splashScreen.hide();     
-      
+      splashScreen.hide();  
     });
   }
 
   onLoad(page:any){
     this.nav.setRoot(page);
     this.menuCtrl.close();
+    
     
   }
 

@@ -7,6 +7,7 @@ import {MeasuretypePage} from '../measuretype/measuretype';
 import {MeasureTypeService} from '../../app/shared/measuretype.service';
 import {CalcTypeService} from '../../app/shared/calctype.service';
 import {UserService} from '../../app/shared/user.service';
+import {GroupsService} from '../../app/shared/groups.service';
 /**
  * Generated class for the MainPage page.
  *
@@ -45,13 +46,14 @@ export class MainPage {
   private measuretype: MeasureTypeService, 
   private calctype: CalcTypeService,
   private menuCtrl: MenuController,
-  private userService: UserService
+  private userService: UserService,
+  private groups: GroupsService
  ) {
     
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MainPage');
+    console.log(this.groups.getGroups().subscribe(val => console.log(val.json())));
   }
 
 

@@ -4,14 +4,12 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class GroupsService {
-    url = 'https://hydmech-59ab0.firebaseio.com/'
-    
+    bimetalUrl = 'https://hydmech-59ab0.firebaseio.com/BIMETAL.json'
+
     constructor(private http: Http) { }
 
-    getGroups() {
-        return this.http.get(this.url).map(
-            response => response.json()
-        );
+    getBimtealGroups() {
+        return this.http.get(this.bimetalUrl);
     }
 }
 
