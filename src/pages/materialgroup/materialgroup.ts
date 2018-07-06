@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams,MenuController } from 'ionic-angula
 import { HorizontalPage } from '../horizontal/horizontal';
 import { VerticalPage } from '../vertical/vertical';
 import { BandsawService }  from '../../app/shared/bandsaw.service'
+import {GroupsService} from '../../app/shared/groups.service';
 
 /**
  * Generated class for the MaterialgroupPage page.
@@ -20,11 +21,12 @@ export class MaterialgroupPage {
   horizontalPage = HorizontalPage;
   verticalPage = VerticalPage;
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController,
-    private bandsawService : BandsawService) {
+    private bandsawService : BandsawService, private groups: GroupsService
+    ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MaterialgroupPage');
+    console.log(this.groups.getBimetalGroups().subscribe(val => console.log(val.json())));
   }
 
    openPage() {
