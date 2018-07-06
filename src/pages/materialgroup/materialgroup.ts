@@ -61,7 +61,8 @@ export class MaterialgroupPage {
         data => {
           this.bimetalGroups =  data.json()
           if(this.bimetalGroups.length > 0 ) {
-            this.groupTemp = JSON.parse(JSON.stringify(this.bimetalGroups)); 
+            this.groupTemp = JSON.parse(JSON.stringify(this.bimetalGroups));
+            this.groupTemp.shift(); 
             this.setGroupsDropDown();
           }
         }        
