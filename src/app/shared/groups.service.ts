@@ -12,7 +12,7 @@ export class GroupsService {
         return this.http.get(this.bimetalUrl);
     }
 
-    getcarbonGroups() {
+    getCarbonGroups() {
         return this.http.get(this.carbonUrl);
     }
 }

@@ -6,6 +6,8 @@ import { BandsawService }  from '../../app/shared/bandsaw.service'
 import {GroupsService} from '../../app/shared/groups.service';
 import {MeasureTypeService} from '../../app/shared/measuretype.service';
 import * as _ from 'underscore';
+import {BladeTypeService} from '../../app/shared/bladetype.service';
+
 
 /**
  * Generated class for the MaterialgroupPage page.
@@ -24,15 +26,21 @@ export class MaterialgroupPage {
   horizontalPage = HorizontalPage;
   verticalPage = VerticalPage;
   bimetalGroups: any;
+  carbonGroups: any;
   groupTemp: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController,
-    private bandsawService : BandsawService, private groups: GroupsService, private measuretype : MeasureTypeService
+    private bandsawService : BandsawService, private groups: GroupsService, private measuretype : MeasureTypeService,
+    private bladeType : BladeTypeService
     ) {
   }
 
   ionViewDidLoad() { 
-    this.getBimetalGroups();  
+    if (this.bladeType.getBladeType() === 'bimetal') {
+      this.getBimetalGroups();  
+    } else {
+      this.getCarbonGroups()
+    }  
   }
 
   openPage() {
@@ -48,12 +56,12 @@ export class MaterialgroupPage {
   }
 
   setGroupsDropDown() {
-    this.measuretype.setMeasureType('metric');
     if (this.measuretype.getMeasureType() === 'metric') {
        this.deleteKey('C')
     } else {
        this.deleteKey('B')
     }
+    console.log(this.groupTemp)
   }
 
   getBimetalGroups() {
@@ -69,7 +77,21 @@ export class MaterialgroupPage {
     return  this.bimetalGroups; 
   }
 
+   getCarbonGroups() {
+      this.groups.getCarbonGroups().subscribe(
+        data => {
+          this.carbonGroups =  data.json()
+          if(this.carbonGroups.length > 0 ) {
+            this.groupTemp = JSON.parse(JSON.stringify(this.carbonGroups));
+            this.setGroupsDropDown();
+          }
+        }        
+      );
+    return  this.bimetalGroups; 
+  }
+
   deleteKey(key) {
+    console.log(key)
     for(var i = 0; i<this.groupTemp.length;i++) {
         delete this.groupTemp[i][key]
     }
