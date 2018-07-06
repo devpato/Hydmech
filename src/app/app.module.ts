@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { HttpModule } from '@angular/http';
+import { HttpModule, } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CalcPage } from '../pages/calc/calc';
@@ -29,6 +29,7 @@ import { VariablesService } from './shared/variables.service';
 import { BandsawService } from './shared/bandsaw.service'; 
 import { BladeTypeService } from './shared/bladetype.service'; 
 import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
+import { GroupsService } from './shared/groups.service'; 
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MeasureTypeService,CalcTypeService, UserService,TableService,VariablesService, BandsawService,BladeTypeService
+    ,GroupsService
   ]
 })
 export class AppModule {}
