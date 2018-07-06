@@ -8,7 +8,7 @@ export class GroupsService {
 
     constructor(private http: Http) { }
 
-    getBimtealGroups() {
+    getBimetalGroups() {
         return this.http.get(this.bimetalUrl);
     }
 }
