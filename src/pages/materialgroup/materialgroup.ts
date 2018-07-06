@@ -20,13 +20,15 @@ import {GroupsService} from '../../app/shared/groups.service';
 export class MaterialgroupPage {
   horizontalPage = HorizontalPage;
   verticalPage = VerticalPage;
+  bimetalGroups: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController,
     private bandsawService : BandsawService, private groups: GroupsService
     ) {
   }
 
   ionViewDidLoad() {
-    console.log(this.groups.getBimetalGroups().subscribe(val => console.log(val.json())));
+    this.bimetalGroups = this.getBimetalGroups();
+    console.log(this.bimetalGroups);
   }
 
    openPage() {
@@ -39,6 +41,16 @@ export class MaterialgroupPage {
 
   onOpenMenu(){
     this.menuCtrl.open();    
+  }
+
+  setGroupsDropDown() {
+
+  }
+
+  getBimetalGroups() {
+    return this.groups.getBimetalGroups().subscribe(
+        data => console.log(data.json())
+      );
   }
 
 }
