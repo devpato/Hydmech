@@ -20,9 +20,7 @@ export class BladetypePage {
   private menuCtrl: MenuController, private bladeType : BladeTypeService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BladetypePage');
-  }
+  ionViewDidLoad() {}
 
    openPage ( bladeType: string) {
       this.openMaterialGroupPage(bladeType);

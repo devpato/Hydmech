@@ -25,7 +25,13 @@
         <ion-col col-12>
             <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-0px !important;">
                 <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
-                <ion-option *ngFor="let i of groupTemp">{{i.B}}</ion-option>
+                <div *ngIf="this.measuretype.getMeasureType() === 'metric'; else Imperialtemplate">
+                    <ion-option *ngFor="let i of groupTemp">{{i.B}}</ion-option>
+                </div>
+                <ng-template #Imperialtemplate>
+                    <ion-option *ngFor="let i of groupTemp">{{i.C}}</ion-option>
+                </ng-template>
+                
             </ion-select>
             <button ion-button class="buttonSecondary nextButton" style="" (click)="openPage()">
               <strong><p>NEXT</p></strong>

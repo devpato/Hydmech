@@ -27,9 +27,7 @@ export class CalcPage {
    private menuCtrl: MenuController, private alertCtrl: AlertController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CalcPage');
-  }
+  ionViewDidLoad() {}
 
   ngOnInit() {
     this.meType = this.measuretype.getMeasureType();

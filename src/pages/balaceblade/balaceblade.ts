@@ -18,9 +18,7 @@ export class BalacebladePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BalacebladePage');
-  }
+  ionViewDidLoad() {}
 
   onOpenMenu(){
     this.menuCtrl.open();    

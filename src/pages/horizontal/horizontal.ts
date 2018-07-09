@@ -20,7 +20,6 @@ export class HorizontalPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HorizontalPage');
   }
 
   onOpenMenu(){

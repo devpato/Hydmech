@@ -21,9 +21,7 @@ export class AutomaticPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bandsawService : BandsawService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AutomaticPage');
-  }
+  ionViewDidLoad() {}
 
   onOpenMenu(){
     this.menuCtrl.open();    

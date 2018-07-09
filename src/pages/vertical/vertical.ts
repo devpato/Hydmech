@@ -19,9 +19,7 @@ export class VerticalPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad VerticalPage');
-  }
+  ionViewDidLoad() {}
 
   onOpenMenu(){
     this.menuCtrl.open();    

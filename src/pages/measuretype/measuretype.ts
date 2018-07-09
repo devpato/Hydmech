@@ -25,9 +25,7 @@ export class MeasuretypePage {
     private menuCtrl: MenuController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MeasuretypePage');
-  }
+  ionViewDidLoad() {}
 
   openPage ( measuretypePassed: string) {
     if(this.calctype.getCalcType() === 'circularsaw' ) {
