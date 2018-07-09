@@ -21,7 +21,7 @@ import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = MainPage; // don't forget to change it to HomePage so home because the first page in the app
+  rootPage:any = HorizontalPage; // don't forget to change it to HomePage so home because the first page in the app
   mainPage = MainPage;
   settingsPage = ResultsPage;
   username : string;
