@@ -25,29 +25,23 @@
     <ion-grid text-center>
       <strong><p style="color: #FFD41D; margin:0;">Material Width (In)</p></strong>
       <ion-col col-12>
-          <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
+         <ion-select  #selected [(ngModel)]="selectedSubGroup" (ionChange)="setSelectedSubGroup(selectedSubGroup);" class="selectOpt" style="max-width: 100%; margin-top:-0px !important;">
+            <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
+            <ion-option *ngFor="let i of bimetalDropdown; let x = index" value="{{i.C}}">{{i.C}}</ion-option>            
+        </ion-select>
       </ion-col>     
-      <strong><p style="color: #FFD41D;margin:0;">Material Shape</p></strong>
-       <ion-col col-12>
-            <ion-select  #tools  [(ngModel)]="toolsValue" class="selectOpt" style="max-width: 100%; margin-top:-0px !important;">
-                <ion-option selected="true" disabled="true">-SELECT ONE-</ion-option>
-                <ion-option *ngFor="let i of bimetalDropdown" value="{{i}}">{{i.B}}</ion-option>
-            </ion-select>
-        </ion-col>
-       <strong><p style="color: #FFD41D;margin:0;">Stock Length (In)</p></strong>
+      <strong><p style="color: #FFD41D;margin:0;">Stock Length (In)</p></strong>
       <ion-col col-12>
-          <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #stockLength  [value]="stockLengthValue" (input)="stockLengthValue=$event.target.value" text-center></ion-input>
       </ion-col>
        <strong><p style="color: #FFD41D;margin:0;">Cut Length (In)</p></strong>
       <ion-col col-12>
-          <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #cutLength  [value]="cutLengthValue" (input)="cutLengthValue=$event.target.value" text-center></ion-input>
       </ion-col>
        <strong><p style="color: #FFD41D;margin:0;">Total Number of Cuts</p></strong>
       <ion-col col-12>
-          <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #maxMaterial  [value]="maxMaterialValue" (input)="maxMaterialValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValuesAuto" type="number" pattern="\d*" placeholder="Number Input (INCHES)" #totalCuts  [value]="totalCutsValue" (input)="totalCutsValue=$event.target.value" text-center></ion-input>
       </ion-col>
-        
-
     </ion-grid>
     <ion-grid text-right>
         <button ion-button class="buttonSecondary" style="width: 25%; margin-left:70%; margin-top: 10%; float:right; background-color: black; /* For browsers that do not support gradients */

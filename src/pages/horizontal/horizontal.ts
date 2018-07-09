@@ -21,9 +21,13 @@ export class HorizontalPage {
   ProductivityPage = ProductivityPage;
   bimetalSubGroups : any
   bimetalDropdown : any
+  selectedSubGroup: any
+  stockLengthValue : number
+  cutLengthValue : number
+  totalCutsValue: number 
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bladetype : BladeTypeService,
-  private groupService : GroupsService, private measuretype : MeasureTypeService ) {
-  }
+  private groupService : GroupsService, private measuretype : MeasureTypeService ) {}
 
   ionViewDidLoad() {
     this.populateMaterialShapeDropdown();
@@ -34,6 +38,10 @@ export class HorizontalPage {
   }
 
   openPage() {
+    console.log(this.stockLengthValue);
+    console.log(this.cutLengthValue); 
+    console.log(this.totalCutsValue); 
+    console.log(this.selectedSubGroup); 
     this.navCtrl.push(this.ProductivityPage);
   }
 
@@ -51,5 +59,11 @@ export class HorizontalPage {
       }        
     ); 
   }
+
+  setSelectedSubGroup(selectedSubGroup) {
+    this.selectedSubGroup = selectedSubGroup;
+    console.log(this.selectedSubGroup); 
+  }
+
 
 }
