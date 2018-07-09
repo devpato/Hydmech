@@ -28,6 +28,7 @@ export class MaterialgroupPage {
   bimetalGroups: any;
   carbonGroups: any;
   groupTemp: any;
+  bladeTypeSelected: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController,
     private bandsawService : BandsawService, private groups: GroupsService, private measuretype : MeasureTypeService,
@@ -95,5 +96,10 @@ export class MaterialgroupPage {
     for(var i = 0; i<this.groupTemp.length;i++) {
         delete this.groupTemp[i][key]
     }
+  }
+
+  setSelectedGroup(bladeTypeSelected) {
+    this.bladeType.setBladeType(bladeTypeSelected)
+    console.log(bladeTypeSelected);
   }
 }
