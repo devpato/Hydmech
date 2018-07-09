@@ -99,7 +99,7 @@ export class MaterialgroupPage {
   }
 
   setSelectedGroup(bladeTypeSelected) {
-    this.bladeType.setBladeType(bladeTypeSelected)
+    this.bladeType.setBladeTypeSelected(bladeTypeSelected)
     console.log(bladeTypeSelected);
   }
 }

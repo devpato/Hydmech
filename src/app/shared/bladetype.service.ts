@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 export class BladeTypeService {
     bladeType: string;
     bladeTypeSelected : any
+    
     setBladeType(bladeType) {
         this.bladeType = bladeType;
     }

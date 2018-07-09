@@ -20,12 +20,14 @@ import {MeasureTypeService} from '../../app/shared/measuretype.service';
 export class HorizontalPage {
   ProductivityPage = ProductivityPage;
   bimetalSubGroups : any
-
+  bimetalDropdown : any
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bladetype : BladeTypeService,
   private groupService : GroupsService, private measuretype : MeasureTypeService ) {
   }
 
-  ionViewDidLoad() {}
+  ionViewDidLoad() {
+    this.populateMaterialShapeDropdown();
+  }
 
   onOpenMenu(){
     this.menuCtrl.open();    
@@ -40,9 +42,11 @@ export class HorizontalPage {
       data => {
         this.bimetalSubGroups =  data.json()
         if(this.bimetalSubGroups.length > 0 ) {
-          return this.bimetalSubGroups.filter(group=> {
-            group.A == this.bladetype.getBladeTypeSelected().A
-          })
+          this.bimetalDropdown = this.bimetalSubGroups.filter(
+            group=> {
+              return group.A == this.bladetype.getBladeTypeSelected();
+            }           
+          )
         }
       }        
     ); 
