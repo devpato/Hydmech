@@ -19,6 +19,8 @@ import {MeasureTypeService} from '../../app/shared/measuretype.service';
 })
 export class HorizontalPage {
   ProductivityPage = ProductivityPage;
+  bimetalSubGroups : any
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bladetype : BladeTypeService,
   private groupService : GroupsService, private measuretype : MeasureTypeService ) {
   }
@@ -34,7 +36,16 @@ export class HorizontalPage {
   }
 
   populateMaterialShapeDropdown() {
-
+     this.groupService.getBimetalSubGroups().subscribe(
+        data => {
+          this.bimetalSubGroups =  data.json()
+          if(this.bimetalSubGroups.length > 0 ) {
+              return this.bimetalSubGroups.filter(group=>{
+                group.A == this.bladetype.getBladeTypeSelected().A
+              })
+          }
+        }        
+      ); 
   }
 
 }
