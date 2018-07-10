@@ -21,11 +21,13 @@ export class HorizontalPage {
   ProductivityPage = ProductivityPage;
   bimetalSubGroups : any
   bimetalDropdown : any
-  selectedSubGroup: any
+  selectedSub: any
   stockLengthValue : number
   cutLengthValue : number
   totalCutsValue: number 
-
+  index : number
+  widthValue: number
+  arraySelection : any
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bladetype : BladeTypeService,
   private groupService : GroupsService, private measuretype : MeasureTypeService ) {}
 
@@ -41,7 +43,7 @@ export class HorizontalPage {
     console.log(this.stockLengthValue);
     console.log(this.cutLengthValue); 
     console.log(this.totalCutsValue); 
-    console.log(this.selectedSubGroup); 
+    this.setSelectedSubGroup(this.selectedSub); 
     this.navCtrl.push(this.ProductivityPage);
   }
 
@@ -60,10 +62,16 @@ export class HorizontalPage {
     ); 
   }
 
-  setSelectedSubGroup(selectedSubGroup) {
-    this.selectedSubGroup = selectedSubGroup;
-    console.log(this.selectedSubGroup); 
+  setSelectedSubGroup(selected) {
+    this.arraySelection = selected.split('-');
+    this.index =  this.arraySelection[1];
+    this.widthValue =  this.arraySelection[0];
+    this.getItemSelected(this.index); 
   }
 
+  getItemSelected(index) {
+    console.log(this.bimetalDropdown[index])
+    return  this.bimetalDropdown[index];
+  }
 
 }
