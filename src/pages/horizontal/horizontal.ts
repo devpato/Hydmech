@@ -40,10 +40,11 @@ export class HorizontalPage {
   }
 
   openPage() {
+    this.setSelectedSubGroup(this.selectedSub); 
     console.log(this.stockLengthValue);
     console.log(this.cutLengthValue); 
-    console.log(this.totalCutsValue); 
-    this.setSelectedSubGroup(this.selectedSub); 
+    console.log(this.totalCutsValue);
+    console.log(this.widthValue)
     this.navCtrl.push(this.ProductivityPage);
   }
 
