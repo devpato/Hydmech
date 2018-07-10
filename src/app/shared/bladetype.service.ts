@@ -58,4 +58,12 @@ export class BladeTypeService {
         return this.widthValue;
     }
 
+     setSelectedItem(selectedItem) {
+        this.selectedItem = selectedItem;
+    }
+
+    getSelectedItem() {
+        return this.selectedItem;
+    }
+
 }
