@@ -4,6 +4,11 @@ import { Injectable } from '@angular/core';
 export class BladeTypeService {
     bladeType: string;
     bladeTypeSelected : any
+    stockLengthValue : number
+    cutLengthValue : number
+    totalCutsValue: number 
+    widthValue: number
+    selectedItem: any
     
     setBladeType(bladeType) {
         this.bladeType = bladeType;
@@ -19,5 +24,13 @@ export class BladeTypeService {
 
     getBladeTypeSelected() {
         return this.bladeTypeSelected;
+    }
+
+    setStockLengthValue(stockLengthValue) {
+        this.stockLengthValue = stockLengthValue;
+    }
+
+    getStockLengthValue() {
+        return this.stockLengthValue
     }
 }
