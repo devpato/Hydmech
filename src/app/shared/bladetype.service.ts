@@ -41,4 +41,12 @@ export class BladeTypeService {
     getCutLengthValue() {
         return this.cutLengthValue;
     }
+
+    setTotalCutsValue(totalCutsValue) {
+        this.totalCutsValue = totalCutsValue;
+    }
+
+    getTotalCutsValue() {
+        return this.totalCutsValue;
+    }
 }
