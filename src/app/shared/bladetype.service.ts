@@ -49,4 +49,13 @@ export class BladeTypeService {
     getTotalCutsValue() {
         return this.totalCutsValue;
     }
+
+    setWidthValue(widthValue) {
+        this.widthValue = widthValue;
+    }
+
+    getWidthValue() {
+        return this.widthValue;
+    }
+
 }
