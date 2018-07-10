@@ -66,12 +66,10 @@ export class HorizontalPage {
     this.arraySelection = selected.split('-');
     this.index =  this.arraySelection[1];
     this.widthValue =  this.arraySelection[0];
-    this.getItemSelected(this.index); 
+    this.bladetype.setSelectedItem(this.bimetalDropdown[this.index]);
+    this.bladetype.setStockLengthValue(this.stockLengthValue);
+    this.bladetype.setCutLengthValue(this.cutLengthValue);
+    this.bladetype.setTotalCutsValue(this.totalCutsValue);
+    this.bladetype.setWidthValue(this.widthValue);
   }
-
-  getItemSelected(index) {
-    console.log(this.bimetalDropdown[index])
-    return  this.bimetalDropdown[index];
-  }
-
 }

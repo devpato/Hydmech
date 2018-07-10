@@ -58,7 +58,7 @@ export class BladeTypeService {
         return this.widthValue;
     }
 
-     setSelectedItem(selectedItem) {
+    setSelectedItem(selectedItem) {
         this.selectedItem = selectedItem;
     }
 
