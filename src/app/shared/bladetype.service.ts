@@ -31,6 +31,14 @@ export class BladeTypeService {
     }
 
     getStockLengthValue() {
-        return this.stockLengthValue
+        return this.stockLengthValue;
+    }
+
+    setCutLengthValue(cutLengthValue) {
+        this.cutLengthValue = cutLengthValue;
+    }
+
+    getCutLengthValue() {
+        return this.cutLengthValue;
     }
 }
