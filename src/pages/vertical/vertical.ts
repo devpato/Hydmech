@@ -22,9 +22,9 @@ export class VerticalPage {
   bimetalSubGroups : any
   bimetalDropdown : any
   selectedSub: any
-  stockLengthValue : number
-  cutLengthValue : number
-  totalCutsValue: number 
+  stockLengthValue : any
+  cutLengthValue : any
+  totalCutsValue: any 
   index : number
   widthValue: number
   arraySelection : any
@@ -44,7 +44,11 @@ export class VerticalPage {
     console.log(this.stockLengthValue);
     console.log(this.cutLengthValue); 
     console.log(this.totalCutsValue);
-    console.log(this.widthValue)
+    console.log(this.widthValue);
+    this.stockLengthValue = ''
+    this.cutLengthValue = ''
+    this.totalCutsValue = ''
+    this.selectedSub = 'default';
     this.navCtrl.push(this.ProductivityPage);
   }
 
