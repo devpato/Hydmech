@@ -40,12 +40,12 @@ export class MainPage {
     fullscreen : 'yes',//Windows only    
   };
   constructor(public navCtrl: NavController, 
-  public navParams: NavParams,
-  private theInAppBrowser: InAppBrowser,
-  private measuretype: MeasureTypeService, 
-  private calctype: CalcTypeService,
-  private menuCtrl: MenuController,
-  private userService: UserService,
+    public navParams: NavParams,
+    private theInAppBrowser: InAppBrowser,
+    private measuretype: MeasureTypeService, 
+    private calctype: CalcTypeService,
+    private menuCtrl: MenuController,
+    private userService: UserService,
  ) {
     
   }
