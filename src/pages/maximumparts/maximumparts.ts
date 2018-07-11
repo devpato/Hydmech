@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import {BladeTypeService} from '../../app/shared/bladetype.service';
 
 /**
  * Generated class for the MaximumpartsPage page.
@@ -21,10 +22,14 @@ export class MaximumpartsPage {
   cutTime = 0;
   cyecleTime = 0;
   toothJob = 0;
+  selectedItem : any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bladeTypeService : BladeTypeService) {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {}
-
-  ionViewDidLoad() {}
+  ionViewDidLoad() {
+    this.selectedItem = this.bladeTypeService.getSelectedItem();
+    this.cuttingSpeed = this.selectedItem.D;
+    this.feedRate =   this.selectedItem.F;
+  }
 
   onOpenMenu(){
     this.menuCtrl.open();    
