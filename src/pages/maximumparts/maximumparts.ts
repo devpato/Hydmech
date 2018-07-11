@@ -17,7 +17,7 @@ import {BladeTypeService} from '../../app/shared/bladetype.service';
 export class MaximumpartsPage {
   cuttingSpeed = 0;
   feedRate = 0;
-  cuttinRate = 0;
+  cuttingRate = 0;
   optimumTooth = 0;
   cutTime = 0;
   cyecleTime = 0;
