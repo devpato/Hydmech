@@ -26,13 +26,12 @@
 
 
     <ion-grid text-left class="squareBackground">
-        
-          <ion-row style="margin-left: 9%;">
+        <ion-row style="margin-left: 9%;">
                 <ion-col col-7 class="objectsCalcPage">
                     <p class="inputLabels">Cutting Speed</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center >{{cuttingSpeed}}</p>
                 </ion-col>
           </ion-row> 
            <ion-row class="rowsForFields">
@@ -40,7 +39,7 @@
                     <p class="inputLabels">Feed Rate</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{feedRate}}</p>
                 </ion-col>
           </ion-row> 
            <ion-row class="rowsForFields">
@@ -48,7 +47,7 @@
                     <p class="inputLabels">Cutting Rate</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{cuttingRate}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -56,7 +55,7 @@
                     <p class="inputLabels">Optimum Tooth Pitch</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{optimumTooth}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -64,7 +63,7 @@
                     <p class="inputLabels">Cut Time</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{cutTime}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -72,7 +71,7 @@
                     <p class="inputLabels">Cycle Time</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{cyecleTime}}</p>
                 </ion-col>
           </ion-row>  
            <ion-row class="rowsForFields">
@@ -80,8 +79,8 @@
                     <p class="inputLabels">Tooth Job Time</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>0</p>
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{toothJob}}</p>
                 </ion-col>
           </ion-row>   
-      </ion-grid>
+    </ion-grid>
 </ion-content>
