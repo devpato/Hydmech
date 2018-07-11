@@ -14,9 +14,15 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
   templateUrl: 'maximumparts.html',
 })
 export class MaximumpartsPage {
+  cuttingSpeed = 0;
+  feedRate = 0;
+  cuttinRate = 0;
+  optimumTooth = 0;
+  cutTime = 0;
+  cyecleTime = 0;
+  toothJob = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController) {}
 
   ionViewDidLoad() {}
 
