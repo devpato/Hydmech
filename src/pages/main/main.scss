@@ -25,17 +25,6 @@ page-main {
     }
 }
 
-@media screen and (max-height: 750px) {
-    .calcTypeBoxes{
-        background-color:  #FFD41D;
-        height: 200px;
-        margin-left: 8%;
-        margin-top: 8%;
-        margin-bottom: 8%;
-        padding-top: 2%;
-    }
-}
-
 @media screen and (max-height: 700px) {
     .calcTypeBoxes{
         background-color:  #FFD41D;
@@ -47,7 +36,7 @@ page-main {
     }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 640px) {
     .calcTypeBoxes{
         background-color:  #FFD41D;
         height: 160px;
