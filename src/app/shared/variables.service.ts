@@ -33,7 +33,7 @@ export class VariablesService {
     cutLength: number;
     masterBarLength:number;
     materialGrade: string;
-    uptime:number;
+    uptime:number = 80;
     toolsValue: number;
 
     //Standard to metric
@@ -346,9 +346,9 @@ export class VariablesService {
 
      machineTable = [
         {
-           id: "CSNC-50",
+           id: "CSNC-65",
            bladeDiameter : 250,
-           maxBarDiameter: 50
+           maxBarDiameter: 65//65
         },
         {
            id: "CSNC-80",

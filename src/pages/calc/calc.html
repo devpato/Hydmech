@@ -43,10 +43,10 @@
           <ion-input class="inputValues" type="number"  pattern="\d*" placeholder="Enter value" #masterBar  [value]="masterBarValue" (input)="masterBarValue=$event.target.value" text-center></ion-input>
       </ion-col>
       <ion-col col-8>
-          <p class="inputLabels">Rate per Hour</p>
+          <p class="inputLabels">Efficiency per Hour</p>
       </ion-col>
       <ion-col col-4>
-          <ion-input class="inputValues" type="number" pattern="\d*" placeholder="Enter value" #rate  [value]="rateValue" (input)="rateValue=$event.target.value" text-center></ion-input>
+          <ion-input class="inputValues" type="text" pattern="\d*" placeholder="Enter value" #rate  [value]="rateValue" [(ngModel)]="rateValue" (input)="rateValue=$event.target.value" text-center></ion-input>
       </ion-col>
 
 

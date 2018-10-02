@@ -49,7 +49,7 @@ export class HorizontalPage {
   }
 
   populateMaterialShapeDropdown() {
-    this.groupService.getBimetalSubGroups().subscribe(
+    this.groupService.getGroups().subscribe(
       data => {
         this.bimetalSubGroups =  data.json()
         if(this.bimetalSubGroups.length > 0 ) {

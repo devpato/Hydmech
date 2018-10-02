@@ -17,7 +17,7 @@ export class CalcPage {
   cutLengthValue: number;
   masterBarValue: number;
   toolsValue:number; 
-  rateValue: number;
+  rateValue: any = '80%';
   genericRow: any;
   meType;
   mesType;
@@ -43,6 +43,9 @@ export class CalcPage {
     console.log(this.masterBarValue);
     console.log(Number(this.rateValue)/100);
     console.log("Selected :" + this.toolsValue);*/
+    this.rateValue = parseInt(this.rateValue.replace(/%/g, ''));
+    console.log("rate value");
+    console.log(this.rateValue);
 
     if(this.maxMaterialValue != 0 || this.diameterValue != 0 || this.cutLengthValue != 0 || this.masterBarValue != 0  || this.rateValue != 0) {
         this.variables.setDiameter(this.meType === 'imperial' ? Number(this.diameterValue/25.4) : Number(this.diameterValue));

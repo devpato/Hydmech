@@ -4,21 +4,31 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class GroupsService {
-    bimetalUrl = 'https://hydmech-59ab0.firebaseio.com/BIMETAL.json';
-    bimetalSubGroupsUrl = 'https://hydmech-59ab0.firebaseio.com/BIMETAL_GROUPS.json';
-    carbonUrl = 'https://hydmech-59ab0.firebaseio.com/CARBON.json';
+    groupsUrl = 'https://hydmech-59ab0.firebaseio.com/GROUPS.json';
+    bimetal_metric_groups_Url = 'https://hydmech-59ab0.firebaseio.com/BIMETAL_METRIC_GROUPS.json';
+    carbon_metric_groups_Url = 'https://hydmech-59ab0.firebaseio.com/CARBON_METRIC_GROUPS.json';
+    bimetal_imperial_groups_Url = 'https://hydmech-59ab0.firebaseio.com/BIMETAL_IMPERIAL_GROUPS.json';
+    carbon_imperial_groups_Url = 'https://hydmech-59ab0.firebaseio.com/CARBON_IMPERIAL_GROUPS.json';
     constructor(private http: Http) { }
 
-    getBimetalGroups() {
-        return this.http.get(this.bimetalUrl);
+    getGroups() {
+        return this.http.get(this.groupsUrl);
     }
 
-    getCarbonGroups() {
-        return this.http.get(this.carbonUrl);
+    getCarbonMetricGroups() {
+        return this.http.get(this.carbon_metric_groups_Url);
     }
 
-    getBimetalSubGroups() {
-        return this.http.get(this.bimetalSubGroupsUrl);
+    getBimetalMetricGroups() {
+        return this.http.get(this.bimetal_metric_groups_Url);
+    }
+
+    getBimetalImperialGroups() {
+        return this.http.get(this.bimetal_imperial_groups_Url);
+    }
+
+    getCarbonImperialGroups() {
+        return this.http.get(this.carbon_imperial_groups_Url);
     }
 }
 

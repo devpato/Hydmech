@@ -66,7 +66,7 @@ export class MaterialgroupPage {
   }
 
   getBimetalGroups() {
-      this.groups.getBimetalGroups().subscribe(
+      this.groups.getGroups().subscribe(
         data => {
           this.bimetalGroups =  data.json()
           if(this.bimetalGroups.length > 0 ) {
@@ -79,7 +79,7 @@ export class MaterialgroupPage {
   }
 
    getCarbonGroups() {
-      this.groups.getCarbonGroups().subscribe(
+      this.groups.getGroups().subscribe(
         data => {
           this.carbonGroups =  data.json()
           if(this.carbonGroups.length > 0 ) {

@@ -34,6 +34,14 @@
                 <ion-col col-4 class="objectsCalcPage2">
                     <p class="inputValuesResults" type="text" placeholder=""  text-center>{{machine}}</p>
                 </ion-col>
+          </ion-row>
+          <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Cut Time</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{cutTime}}</p>
+                </ion-col>
           </ion-row> 
            <ion-row class="rowsForFields">
                 <ion-col col-7 class="objectsCalcPage">
@@ -42,23 +50,23 @@
                 <ion-col col-4 class="objectsCalcPage2">
                     <p class="inputValuesResults" type="text" placeholder=""  text-center>{{cycleTime}}</p>
                 </ion-col>
-          </ion-row> 
-           <ion-row class="rowsForFields">
-                <ion-col col-7 class="objectsCalcPage">
-                    <p class="inputLabels">Rate per Hour</p>
-                </ion-col>      
-                <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{rph}}</p>
-                </ion-col>
-          </ion-row>  
-           <ion-row class="rowsForFields">
+          </ion-row>
+          <ion-row class="rowsForFields">
                 <ion-col col-7 class="objectsCalcPage">
                     <p class="inputLabels">Pieces Per Hour</p>
                 </ion-col>      
                 <ion-col col-4 class="objectsCalcPage2">
                     <p class="inputValuesResults" type="text" placeholder=""  text-center>{{pph}}</p>
                 </ion-col>
-          </ion-row>  
+          </ion-row> 
+           <ion-row class="rowsForFields">
+                <ion-col col-7 class="objectsCalcPage">
+                    <p class="inputLabels">Efficiency per Hour</p>
+                </ion-col>      
+                <ion-col col-4 class="objectsCalcPage2">
+                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{rph}}</p>
+                </ion-col>
+          </ion-row>    
            <ion-row class="rowsForFields">
                 <ion-col col-7 class="objectsCalcPage">
                     <p class="inputLabels">RPM</p>
@@ -82,15 +90,7 @@
                 <ion-col col-4 class="objectsCalcPage2">
                     <p class="inputValuesResults" type="text" placeholder=""  text-center>{{toothLoad}}</p>
                 </ion-col>
-          </ion-row>  
-           <ion-row class="rowsForFields">
-                <ion-col col-7 class="objectsCalcPage">
-                    <p class="inputLabels">Cut Time</p>
-                </ion-col>      
-                <ion-col col-4 class="objectsCalcPage2">
-                    <p class="inputValuesResults" type="text" placeholder=""  text-center>{{cutTime}}</p>
-                </ion-col>
-          </ion-row>  
+          </ion-row>    
       </ion-grid>
         <!--<button ion-button color="primary" class="buttonPrimary" style="width: 78%; margin-left:10%; margin-top: 10%;" (click)="changePage(myPass.value, myUser.value)">
             <ion-icon class="mail" name="ios-mail" large></ion-icon>SEND RESULTS TO EMAIL
