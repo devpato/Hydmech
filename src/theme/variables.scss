@@ -192,18 +192,6 @@ span.button-inner {
   [aria-checked=true] .alert-radio-label {
       color: #FFD41D !important;
   }
-
-  a[disabled], button[disabled], [ion-button][disabled] {
-    opacity: 1 !important;
-    color: #FFF !important;
-    background-color: #FFD41D !important;
-  }
-
-   a[enabled], button[enabled], [ion-button][enabled] {
-    opacity: 1 !important;
-    color: #FFF !important;
-    background-color: #FFD41D !important;
-  }
 }
 
 
