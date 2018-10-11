@@ -27,7 +27,7 @@
       <ion-col col-12>
          <ion-select  #selected [(ngModel)]="selectedSub" class="selectOpt" style="max-width: 100%; margin-top:-0px !important;">
             <ion-option selected="true" disabled="true" value="default">-SELECT ONE-</ion-option>
-            <ion-option *ngFor="let i of bimetalDropdown; let x = index" value="{{i.C}}-{{x}}">{{i.C}}</ion-option>            
+            <ion-option *ngFor="let i of groupTemp;" value="{{i.C}}">{{i.C}}</ion-option>            
         </ion-select>
       </ion-col>     
       <strong><p style="color: #FFD41D;margin:0;">Stock Length (In)</p></strong>

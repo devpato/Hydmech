@@ -28,6 +28,8 @@ export class BladetypePage {
 
   openMaterialGroupPage(bladeType: string) {
       this.bladeType.setBladeType(bladeType);
+      console.log("blade type");
+      console.log(bladeType);
       this.navCtrl.push(MaterialgroupPage);   
   }
 
