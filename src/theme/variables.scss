@@ -181,6 +181,34 @@ span.button-inner {
     font-size: 20px !important;
     margin-right: 2% !important;
 }
+
+.alert-wrapper {
+  max-width: 100% !important;
+  background-color: #222 !important;
+  .alert-radio-label {
+    color: white !important;
+  }
+
+  [aria-checked=true] .alert-radio-label {
+      color: #FFD41D !important;
+  }
+
+  a[disabled], button[disabled], [ion-button][disabled] {
+    opacity: 1 !important;
+    color: #FFF !important;
+    background-color: #FFD41D !important;
+  }
+
+   a[enabled], button[enabled], [ion-button][enabled] {
+    opacity: 1 !important;
+    color: #FFF !important;
+    background-color: #FFD41D !important;
+  }
+}
+
+
+
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
