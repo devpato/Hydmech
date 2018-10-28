@@ -4,10 +4,9 @@ import { MeasuretypePage } from './measuretype';
 
 @NgModule({
   declarations: [
-    MeasuretypePage,
+    
   ],
   imports: [
-    IonicPageModule.forChild(MeasuretypePage),
   ],
 })
 export class MeasuretypePageModule {}

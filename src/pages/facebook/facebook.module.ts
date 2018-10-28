@@ -4,10 +4,8 @@ import { FacebookPage } from './facebook';
 
 @NgModule({
   declarations: [
-    FacebookPage,
   ],
   imports: [
-    IonicPageModule.forChild(FacebookPage),
   ],
 })
 export class FacebookPageModule {}

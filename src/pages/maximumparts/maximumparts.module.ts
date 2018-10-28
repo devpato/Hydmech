@@ -4,10 +4,9 @@ import { MaximumpartsPage } from './maximumparts';
 
 @NgModule({
   declarations: [
-    MaximumpartsPage,
   ],
   imports: [
-    IonicPageModule.forChild(MaximumpartsPage),
+
   ],
 })
 export class MaximumpartsPageModule {}

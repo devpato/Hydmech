@@ -4,10 +4,9 @@ import { MainPage } from './main';
 
 @NgModule({
   declarations: [
-    MainPage,
   ],
   imports: [
-    IonicPageModule.forChild(MainPage),
+
   ],
 })
 export class MainPageModule {}

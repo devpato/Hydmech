@@ -4,10 +4,10 @@ import { RoundsawPage } from './roundsaw';
 
 @NgModule({
   declarations: [
-    RoundsawPage,
+
   ],
   imports: [
-    IonicPageModule.forChild(RoundsawPage),
+
   ],
 })
 export class RoundsawPageModule {}

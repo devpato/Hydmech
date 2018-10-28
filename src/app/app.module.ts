@@ -6,21 +6,21 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule, } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-// import { CalcPage } from '../pages/calc/calc';
-// import { MainPage } from '../pages/main/main';
-// import { SawTypePage } from '../pages/saw-type/saw-type';
-// import { ResultsPage } from '../pages/results/results';
-// import { AutomaticPage } from '../pages/automatic/automatic';
-// import { VerticalPage } from '../pages/vertical/vertical';
-// import { HorizontalPage } from '../pages/horizontal/horizontal';
-// import { BladetypePage } from '../pages/bladetype/bladetype';
-// import { BalacebladePage } from '../pages/balaceblade/balaceblade';
-// import { MaximumpartsPage } from '../pages/maximumparts/maximumparts';
-// import { ProductivityPage } from '../pages/productivity/productivity';
-// import { FacebookPage } from '../pages/facebook/facebook';
-// import { RoundsawPage } from '../pages/roundsaw/roundsaw';
-// import { MeasuretypePage } from '../pages/measuretype/measuretype';
-//import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
+import { CalcPage } from '../pages/calc/calc';
+import { MainPage } from '../pages/main/main';
+import { SawTypePage } from '../pages/saw-type/saw-type';
+import { ResultsPage } from '../pages/results/results';
+import { AutomaticPage } from '../pages/automatic/automatic';
+import { VerticalPage } from '../pages/vertical/vertical';
+import { HorizontalPage } from '../pages/horizontal/horizontal';
+import { BladetypePage } from '../pages/bladetype/bladetype';
+import { BalacebladePage } from '../pages/balaceblade/balaceblade';
+import { MaximumpartsPage } from '../pages/maximumparts/maximumparts';
+import { ProductivityPage } from '../pages/productivity/productivity';
+import { FacebookPage } from '../pages/facebook/facebook';
+import { RoundsawPage } from '../pages/roundsaw/roundsaw';
+import { MeasuretypePage } from '../pages/measuretype/measuretype';
+import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
 import { MeasureTypeService } from './shared/measuretype.service';
 import { CalcTypeService } from './shared/calctype.service';
 import { UserService} from './shared/user.service'; 
@@ -36,21 +36,21 @@ import { GroupsService } from './shared/groups.service';
   declarations: [
     MyApp,
      HomePage,
-    // MainPage,
-    // RoundsawPage,
-    // MeasuretypePage,
-    // FacebookPage,
-    // CalcPage,
-    // ResultsPage,
-    // SawTypePage,
-    // AutomaticPage,
-    // VerticalPage,
-    // HorizontalPage,
-    // BladetypePage,
-    // ProductivityPage,
-    // BalacebladePage,
-    // MaximumpartsPage,
-    // MaterialgroupPage
+     MainPage,
+    RoundsawPage,
+    MeasuretypePage,
+    FacebookPage,
+    CalcPage,
+    ResultsPage,
+    SawTypePage,
+    AutomaticPage,
+    VerticalPage,
+    HorizontalPage,
+    BladetypePage,
+    ProductivityPage,
+    BalacebladePage,
+    MaximumpartsPage,
+    MaterialgroupPage
   ],
   imports: [
     BrowserModule,
@@ -61,21 +61,21 @@ import { GroupsService } from './shared/groups.service';
   entryComponents: [
     MyApp,
     HomePage,
-    // MainPage,
-    // RoundsawPage,
-    // MeasuretypePage,
-    // FacebookPage,
-    // CalcPage,
-    // ResultsPage,
-    // SawTypePage,
-    // //AutomaticPage,
-    // VerticalPage,
-    // HorizontalPage,
-    // BladetypePage,
-    // ProductivityPage,
-    // BalacebladePage,
-    // MaximumpartsPage,
-    // MaterialgroupPage
+    MainPage,
+    RoundsawPage,
+    MeasuretypePage,
+    FacebookPage,
+    CalcPage,
+    ResultsPage,
+    SawTypePage,
+    AutomaticPage,
+    VerticalPage,
+    HorizontalPage,
+    BladetypePage,
+    ProductivityPage,
+    BalacebladePage,
+    MaximumpartsPage,
+    MaterialgroupPage
   ],
   providers: [
     StatusBar,

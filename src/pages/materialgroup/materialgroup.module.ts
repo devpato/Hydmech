@@ -4,10 +4,8 @@ import { MaterialgroupPage } from './materialgroup';
 
 @NgModule({
   declarations: [
-    MaterialgroupPage,
   ],
   imports: [
-    IonicPageModule.forChild(MaterialgroupPage),
   ],
 })
 export class MaterialgroupPageModule {}

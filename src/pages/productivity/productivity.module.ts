@@ -4,10 +4,8 @@ import { ProductivityPage } from './productivity';
 
 @NgModule({
   declarations: [
-    ProductivityPage,
   ],
   imports: [
-    IonicPageModule.forChild(ProductivityPage),
   ],
 })
 export class ProductivityPageModule {}
