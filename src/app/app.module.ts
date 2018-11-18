@@ -29,6 +29,7 @@ import { VariablesService } from './shared/variables.service';
 import { BandsawService } from './shared/bandsaw.service'; 
 import { BladeTypeService } from './shared/bladetype.service'; 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import {DisclaimerPage} from '../pages/disclaimer/disclaimer';
 
 import { GroupsService } from './shared/groups.service'; 
 
@@ -50,7 +51,9 @@ import { GroupsService } from './shared/groups.service';
     ProductivityPage,
     BalacebladePage,
     MaximumpartsPage,
-    MaterialgroupPage
+    MaterialgroupPage,
+    DisclaimerPage
+    
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,8 @@ import { GroupsService } from './shared/groups.service';
     ProductivityPage,
     BalacebladePage,
     MaximumpartsPage,
-    MaterialgroupPage
+    MaterialgroupPage,
+    DisclaimerPage
   ],
   providers: [
     StatusBar,

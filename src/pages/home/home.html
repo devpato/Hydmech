@@ -7,14 +7,16 @@
         </ion-row>
        
           <ion-list class="passField">            
-                <ion-item class="inputFields">
-                    <ion-input type="text" class="inputFields" placeholder="Username" #myUser  [value]="userValue" (input)="userValue=$event.target.value" ></ion-input>
+                <ion-item class="">
+                    <ion-input type="text" class="" placeholder="Username" #myUser  [value]="userValue" (input)="userValue=$event.target.value" ></ion-input>
                 </ion-item>
                 <br>
-                <ion-item class="inputFields">
-                    <ion-input type="password" class="inputFields" placeholder="Password" #myPass  [value]="passValue" (input)="passValue=$event.target.value" ></ion-input>
+                <ion-item class="">
+                    <ion-input type="password" class="" placeholder="Password" #myPass  [value]="passValue" (input)="passValue=$event.target.value" ></ion-input>
                 </ion-item>              
           </ion-list>      
           <button ion-button color="primary" class="buttonPrimary" (click)="changePage(myPass.value, myUser.value)">Sign In</button>
+          <br/>
+          <p class="disclaimer" (click)="openDisclaimer()">Disclaimer</p>
     </ion-grid>    
 </ion-content>

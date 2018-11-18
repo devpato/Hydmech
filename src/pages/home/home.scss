@@ -13,3 +13,39 @@
 .mainGridHomePage{
     margin-top: 30%;
 }
+
+.alert-wrapper {
+    color: white !important;
+    .alert-title {
+       color:  #FFD41D;
+    }
+    
+    .alert-sub-title {
+        color: #FFD41D;
+    }
+
+    .alert-message {
+        color: white !important;
+    }
+}
+
+.item-input {
+    border-top: 0.55px solid #c8c7cc !important;
+    border-bottom: 0.55px solid #c8c7cc !important;
+}
+
+
+.list-ios .item-block .item-inner {
+    border-bottom: none;
+}
+
+.item-md.item-block .item-inner {
+     border-bottom: none;
+}
+
+.disclaimer {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+}

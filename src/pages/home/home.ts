@@ -4,6 +4,7 @@ import {MainPage} from '../main/main';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
 import {UserService} from '../../app/shared/user.service';
+import {DisclaimerPage} from '../disclaimer/disclaimer';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -16,8 +17,8 @@ export class HomePage {
   @Input() theusername: string;
   mainPage = MainPage;
   homePage = HomePage;
-  passValue : string = "";
-  userValue : string = "";
+  passValue : string = "HMA2018";
+  userValue : string = "HydmechUser";
   tempPass : string = "";
   tempUser : string = "";
   tempUsers : JSON;
@@ -78,6 +79,10 @@ export class HomePage {
   ionViewDidEnter(){
     this.getJSON();
     console.log("enter");
+  }
+
+  openDisclaimer() {
+    this.navCtrl.push(DisclaimerPage);
   }
 }
     
