@@ -33,18 +33,12 @@ export class HomePage {
  //https://api.myjson.com/bins/ https://jsonblob.com/850ee672-9d9a-11e7-aa97-09434374a2b8 https://quarkbackend.com/getfile/wearetamo/hydmech //https://www.jasonbase.com
  //http://myjson.com
   changePage( myPass: string, username:string){
-    for(const i of Object.keys(this.tempUsers)){
-      /*if(myPass == this.tempUsers[i].password && username == this.tempUsers[i].username){
-         this.tempFlag = true;
-         this.setUsername.emit(username);
-         this.theusername = username;
-      }*/
-      if(myPass === "HMA2018" && username === "HydmechUser"){
+    if(myPass === "HMA2018" && username === "HydmechUser"){
          this.tempFlag = true;
          this.setUsername.emit(username);
          this.theusername = username;
       }
-    }
+      
     if(this.tempFlag) {
       this.navCtrl.push(this.mainPage);
       /*this.passValue = '';
@@ -77,7 +71,7 @@ export class HomePage {
   }//https://www.jasonbase.com/things/B8Jm/edit
 
   ionViewDidEnter(){
-    this.getJSON();
+    //this.getJSON();
     console.log("enter");
   }
 
