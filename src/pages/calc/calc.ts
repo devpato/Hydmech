@@ -27,7 +27,9 @@ export class CalcPage {
    private menuCtrl: MenuController, private alertCtrl: AlertController) {
   }
 
-  ionViewDidLoad() {}
+  ionViewDidLoad() {
+
+  }
 
   ngOnInit() {
     this.meType = this.measuretype.getMeasureType();
@@ -43,6 +45,7 @@ export class CalcPage {
     console.log(this.masterBarValue);
     console.log(Number(this.rateValue)/100);
     console.log("Selected :" + this.toolsValue);*/
+    console.log("RATE VALUE", this.rateValue);
     this.rateValue = parseInt(this.rateValue.replace(/%/g, ''));
     console.log("rate value");
     console.log(this.rateValue);
@@ -92,6 +95,7 @@ export class CalcPage {
         this.variables.setPCSHour(Number(this.rateValue)/100);
       
         this.navCtrl.push(this.resultsPage);
+         this.rateValue = '80%';
     } else {
       const alert = this.alertCtrl.create({
         title:'Error',

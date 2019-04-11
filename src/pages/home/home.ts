@@ -47,8 +47,8 @@ export class HomePage {
     } else {
       const alert = this.alertCtrl.create({
         title:'Wrong Username or Password',
-        subTitle: 'Please enter the correct username or Password',
-        message: "if you don't know the Username or Password please contact the admin of the app.",
+        subTitle: 'Please enter the correct Username and Password',
+        message: "All new customers/users please contact Hydmech contact to obtain credentials.",
         buttons: [
           {
             text: 'Close',
