@@ -3,19 +3,19 @@ import { Platform, NavController, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MainPage } from '../pages/main/main';
-import { MeasuretypePage } from '../pages/measuretype/measuretype';
-import { BladetypePage } from '../pages/bladetype/bladetype';
-import { BalacebladePage } from '../pages/balaceblade/balaceblade';
-import { MaximumpartsPage } from '../pages/maximumparts/maximumparts';
-import { ProductivityPage } from '../pages/productivity/productivity';
+// import { MeasuretypePage } from '../pages/measuretype/measuretype';
+// import { BladetypePage } from '../pages/bladetype/bladetype';
+// import { BalacebladePage } from '../pages/balaceblade/balaceblade';
+// import { MaximumpartsPage } from '../pages/maximumparts/maximumparts';
+// import { ProductivityPage } from '../pages/productivity/productivity';
 import { ResultsPage } from '../pages/results/results';
 import { HomePage } from '../pages/home/home';
-import { CalcPage } from '../pages/calc/calc';
-import { AutomaticPage } from '../pages/automatic/automatic';
-import { HorizontalPage } from '../pages/horizontal/horizontal';
-import { VerticalPage } from '../pages/vertical/vertical';
-import { UserService } from './shared/user.service';
-import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
+// import { CalcPage } from '../pages/calc/calc';
+// import { AutomaticPage } from '../pages/automatic/automatic';
+// import { HorizontalPage } from '../pages/horizontal/horizontal';
+// import { VerticalPage } from '../pages/vertical/vertical';
+//import { UserService } from './shared/user.service';
+// import { MaterialgroupPage } from '../pages/materialgroup/materialgroup';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +28,6 @@ export class MyApp {
   @ViewChild('nav') nav: NavController;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
   private menuCtrl: MenuController,
-  private userService: UserService
  ) {   
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { BladetypePage } from './bladetype';
+// import { IonicPageModule } from 'ionic-angular';
+// import { BladetypePage } from './bladetype';
 
 @NgModule({
   declarations: [

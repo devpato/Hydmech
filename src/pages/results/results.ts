@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import {VariablesService} from '../../app/shared/variables.service'
-import {CalcPage} from '../calc/calc';
+// import {CalcPage} from '../calc/calc';
 
 /**
  * Generated class for the ResultsPage page.

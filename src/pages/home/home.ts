@@ -3,7 +3,7 @@ import { NavController, AlertController} from 'ionic-angular';
 import {MainPage} from '../main/main';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
-import {UserService} from '../../app/shared/user.service';
+//import {UserService} from '../../app/shared/user.service';
 import {DisclaimerPage} from '../disclaimer/disclaimer';
 @Component({
   selector: 'page-home',
@@ -24,8 +24,7 @@ export class HomePage {
   tempUsers : JSON;
   tempFlag: boolean = false;
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
-  private http: Http,
-  private usernameService: UserService) {
+  private http: Http) {
     this.cleanInput = new EventEmitter();
   }
 

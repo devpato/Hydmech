@@ -5,7 +5,7 @@ import { VerticalPage } from '../vertical/vertical';
 import { BandsawService }  from '../../app/shared/bandsaw.service'
 import {GroupsService} from '../../app/shared/groups.service';
 import {MeasureTypeService} from '../../app/shared/measuretype.service';
-import * as _ from 'underscore';
+// import * as _ from 'underscore';
 import {BladeTypeService} from '../../app/shared/bladetype.service';
 
 

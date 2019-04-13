@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController} from 'ionic-angular';
-import { FacebookPage } from '../facebook/facebook';
+// import { FacebookPage } from '../facebook/facebook';
 import { InAppBrowser,  InAppBrowserOptions } from '@ionic-native/in-app-browser';
-import {RoundsawPage} from '../roundsaw/roundsaw';
+// import {RoundsawPage} from '../roundsaw/roundsaw';
 import {MeasuretypePage} from '../measuretype/measuretype';
-import {MeasureTypeService} from '../../app/shared/measuretype.service';
+// import {MeasureTypeService} from '../../app/shared/measuretype.service';
 import {CalcTypeService} from '../../app/shared/calctype.service';
-import {UserService} from '../../app/shared/user.service';
+// import {UserService} from '../../app/shared/user.service';
 /**
  * Generated class for the MainPage page.
  *
@@ -42,10 +42,10 @@ export class MainPage {
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private theInAppBrowser: InAppBrowser,
-    private measuretype: MeasureTypeService, 
+    // private measuretype: MeasureTypeService, 
     private calctype: CalcTypeService,
     private menuCtrl: MenuController,
-    private userService: UserService,
+    // private userService: UserService,
  ) {
     
   }

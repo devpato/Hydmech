@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { FacebookPage } from './facebook';
+// import { IonicPageModule } from 'ionic-angular';
+// import { FacebookPage } from './facebook';
 
 @NgModule({
   declarations: [

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-import { BandsawService }  from '../../app/shared/bandsaw.service'
+import { IonicPage, NavController, MenuController } from 'ionic-angular';
+// import { BandsawService }  from '../../app/shared/bandsaw.service'
 import { BladetypePage } from '../bladetype/bladetype';
 
 /**
@@ -18,7 +18,7 @@ import { BladetypePage } from '../bladetype/bladetype';
 export class AutomaticPage {
   bladeType = BladetypePage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private bandsawService : BandsawService) {
+  constructor(public navCtrl: NavController, private menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {}

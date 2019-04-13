@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-import { BladetypePage } from '../bladetype/bladetype';
+// import { BladetypePage } from '../bladetype/bladetype';
 import { ProductivityPage } from '../productivity/productivity';
 import {BladeTypeService} from '../../app/shared/bladetype.service';
 import {GroupsService} from '../../app/shared/groups.service';

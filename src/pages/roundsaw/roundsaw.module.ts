@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { RoundsawPage } from './roundsaw';
+// import { IonicPageModule } from 'ionic-angular';
+// import { RoundsawPage } from './roundsaw';
 
 @NgModule({
   declarations: [

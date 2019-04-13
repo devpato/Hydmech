@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { BalacebladePage } from './balaceblade';
+// import { IonicPageModule } from 'ionic-angular';
+// import { BalacebladePage } from './balaceblade';
 
 @NgModule({
   declarations: [
